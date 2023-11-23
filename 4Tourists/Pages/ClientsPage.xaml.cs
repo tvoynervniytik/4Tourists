@@ -60,5 +60,10 @@ namespace _4Tourists.Pages
             }
            
         }
+
+        private void updateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClientsSlv.ItemsSource = DBConnection.TouristsGo.Promocode.ToList();
+        }
     }
 }
