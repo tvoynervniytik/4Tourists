@@ -1,4 +1,5 @@
 ﻿using _4Tourists.DB;
+using _4Tourists.OKNO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,7 +52,13 @@ namespace _4Tourists.Pages
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
+            if(ClientsSlv.SelectedItem is Clients client)
+            {
+                InfoClientsWindow infoClientsWindow = new InfoClientsWindow(client);
 
+                infoClientsWindow.Show();
+            }
+           
         }
     }
 }

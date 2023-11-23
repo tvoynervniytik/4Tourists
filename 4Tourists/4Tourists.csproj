@@ -178,6 +178,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OKNO\InfoClientsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AdminHomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -218,6 +222,9 @@
   <ItemGroup>
     <Compile Include="OKNO\AddPromocodesWindow.xaml.cs">
       <DependentUpon>AddPromocodesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OKNO\InfoClientsWindow.xaml.cs">
+      <DependentUpon>InfoClientsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AdminHomePage.xaml.cs">
       <DependentUpon>AdminHomePage.xaml</DependentUpon>

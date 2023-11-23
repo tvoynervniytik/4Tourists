@@ -127,5 +127,19 @@ Content="..."
 FontSize="25" FontWeight="Bold"
 Foreground="#788E78" Background="#F5F5F5"
 x:Name="EditBtn" BorderThickness="0" Click="EditBtn_Click"/>
+        <Border Height="50" Width="50"
+         Grid.Row="1" Grid.Column="7"
+                Background="#F5F5F5"
+                CornerRadius="30"/>
+        <Button Height="50" Width="50"
+         Grid.Row="1" Grid.Column="7"
+         Content="↺"
+         Background="Transparent"
+         BorderBrush="#8b4513"
+         BorderThickness="0"
+         HorizontalAlignment="Center"
+         FontSize="25" FontWeight="Bold"
+         Foreground="PaleVioletRed"
+         x:Name="updateBtn" Click="updateBtn_Click" Cursor="Hand"/>
     </Grid>
 </Page>
