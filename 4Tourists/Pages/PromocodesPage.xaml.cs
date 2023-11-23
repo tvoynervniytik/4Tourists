@@ -28,6 +28,7 @@ namespace _4Tourists.Pages
             InitializeComponent();
             promocodes = new List<Promocode>(DBConnection.TouristsGo.Promocode.ToList());
             this.DataContext = this;
+            
         }
 
         private void delBtn_Click(object sender, RoutedEventArgs e)
@@ -50,6 +51,12 @@ namespace _4Tourists.Pages
             AddPromocodesWindow addPromocodesWindow = new AddPromocodesWindow();
 
             addPromocodesWindow.Show();
+            
+        }
+
+        private void updateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Promocodeslv.ItemsSource = DBConnection.TouristsGo.Promocode.ToList();
         }
     }
 }

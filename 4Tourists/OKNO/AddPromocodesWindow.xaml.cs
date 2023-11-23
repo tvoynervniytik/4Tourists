@@ -1,4 +1,5 @@
 ﻿using _4Tourists.DB;
+using _4Tourists.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace _4Tourists.OKNO
@@ -37,6 +39,8 @@ namespace _4Tourists.OKNO
 
             DBConnection.TouristsGo.Promocode.Add(promocod);
             DBConnection.TouristsGo.SaveChanges();
+            this.Close();
+            
         }
     }
 }
