@@ -26,8 +26,11 @@ namespace _4Tourists.Pages
         public AdminHomePage()
         {
             InitializeComponent();
+            var FIO = DBConnection.loginedUser.Surname +' '+ DBConnection.loginedUser.Name;
             loggedUser = DBConnection.loginedUser;
-            UserNameTB.Text = DBConnection.loginedUser.Surname;
+            UserNameTB.Text = FIO;
+
+
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
@@ -57,7 +60,7 @@ namespace _4Tourists.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new PromocodesPage());
         }
     }
 }

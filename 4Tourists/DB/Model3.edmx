@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище ToristsGOModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище ToristsGOModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Booking">
           <Key>
             <PropertyRef Name="Id" />
@@ -145,9 +145,7 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Booking_Clients">
-          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
           <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Clients">
@@ -159,9 +157,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Booking_Employee">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
           <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -173,9 +169,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Booking_Tours">
-          <End Role="Tours" Type="Self.Tours" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Tours" Type="Self.Tours" Multiplicity="0..1" />
           <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Tours">
@@ -187,9 +181,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_City_Country">
-          <End Role="Country" Type="Self.Country" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
           <End Role="City" Type="Self.City" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Country">
@@ -201,9 +193,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Employee_Post">
-          <End Role="Post" Type="Self.Post" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Post" Type="Self.Post" Multiplicity="0..1" />
           <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Post">
@@ -239,9 +229,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Payment_Promocode">
-          <End Role="Promocode" Type="Self.Promocode" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Promocode" Type="Self.Promocode" Multiplicity="0..1" />
           <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Promocode">
@@ -265,9 +253,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Registration_Clients">
-          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
           <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Clients">
@@ -291,9 +277,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Tours_Country">
-          <End Role="Country" Type="Self.Country" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
           <End Role="Tours" Type="Self.Tours" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Country">
@@ -305,9 +289,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Tours_Hotel">
-          <End Role="Hotel" Type="Self.Hotel" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="0..1" />
           <End Role="Tours" Type="Self.Tours" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hotel">
@@ -319,9 +301,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Tours_Nutrition">
-          <End Role="Nutrition" Type="Self.Nutrition" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Nutrition" Type="Self.Nutrition" Multiplicity="0..1" />
           <End Role="Tours" Type="Self.Tours" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Nutrition">
@@ -333,9 +313,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Tours_TypeTour">
-          <End Role="TypeTour" Type="Self.TypeTour" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="TypeTour" Type="Self.TypeTour" Multiplicity="0..1" />
           <End Role="Tours" Type="Self.Tours" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TypeTour">
@@ -422,8 +400,7 @@
             <End Role="Tours" EntitySet="Tours" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ToristsGOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

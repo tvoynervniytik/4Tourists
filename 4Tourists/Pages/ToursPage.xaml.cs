@@ -1,6 +1,8 @@
 ﻿using _4Tourists.DB;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,7 +43,12 @@ namespace _4Tourists.Pages
 
         private void delBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (ToursSlv.SelectedItem is Tours tours)
+            {
+                DBConnection.TouristsGo.Tours.Remove(tours);
+                DBConnection.TouristsGo.SaveChanges();
+                ToursSlv.ItemsSource = DBConnection.TouristsGo.Tours.ToList();
+            }
         }
 
         private void addBtn_Click(object sender, RoutedEventArgs e)

@@ -36,7 +36,12 @@ namespace _4Tourists.Pages
 
         private void delBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (ClientsSlv.SelectedItem is Clients client)
+            {
+                DBConnection.TouristsGo.Clients.Remove(client);
+                DBConnection.TouristsGo.SaveChanges();
+                ClientsSlv.ItemsSource = DBConnection.TouristsGo.Clients.ToList();
+            }
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)

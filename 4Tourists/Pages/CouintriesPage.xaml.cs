@@ -36,7 +36,12 @@ namespace _4Tourists.Pages
 
         private void delBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (CountriesSlv.SelectedItem is Country country)
+            {
+                DBConnection.TouristsGo.Country.Remove(country);
+                DBConnection.TouristsGo.SaveChanges();
+                CountriesSlv.ItemsSource = DBConnection.TouristsGo.Country.ToList();
+            }
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)

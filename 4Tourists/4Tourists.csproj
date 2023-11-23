@@ -198,6 +198,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PromocodesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\TestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -225,6 +229,9 @@
     </Compile>
     <Compile Include="Pages\HotelsPage.xaml.cs">
       <DependentUpon>HotelsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PromocodesPage.xaml.cs">
+      <DependentUpon>PromocodesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>

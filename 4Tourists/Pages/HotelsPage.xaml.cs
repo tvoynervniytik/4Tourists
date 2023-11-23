@@ -43,7 +43,12 @@ namespace _4Tourists.Pages
 
         private void delBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (HotelsSlv.SelectedItem is Hotel hotel)
+            {
+                DBConnection.TouristsGo.Hotel.Remove(hotel);
+                DBConnection.TouristsGo.SaveChanges();
+                HotelsSlv.ItemsSource = DBConnection.TouristsGo.Hotel.ToList();
+            }
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
