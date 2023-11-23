@@ -85,7 +85,7 @@ Margin="20 0 0 0"/>
                              Width="190">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Photo}"/>
+                                <Image Source="{Binding Photo}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

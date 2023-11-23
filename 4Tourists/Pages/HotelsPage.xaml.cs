@@ -57,12 +57,12 @@ namespace _4Tourists.Pages
 
         private void HotelsSlv_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //if (HotelsSlv.SelectedItem is Hotel hotel)
-            //{
-            //    InfoClientsWindow infoClientsWindow = new InfoClientsWindow(hotel);
+            if (HotelsSlv.SelectedItem is Hotel hotel)
+            {
+                EditHotelWindow editHotelWindow = new EditHotelWindow(hotel);
 
-            //    infoClientsWindow.Show();
-            //}
+                editHotelWindow.Show();
+            }
         }
     }
 }

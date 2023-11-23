@@ -64,6 +64,7 @@ namespace _4Tourists.OKNO
                 hot.IdCity = a.Id;
                 DBConnection.TouristsGo.Hotel.Add(hot);
                 DBConnection.TouristsGo.SaveChanges();
+                this.Close();
 
             }
         }
