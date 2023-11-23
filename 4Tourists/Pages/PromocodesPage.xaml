@@ -97,14 +97,18 @@ Margin="20 0 0 0"/>
          FontSize="15" FontWeight="Bold"
          Foreground="PaleVioletRed"
          x:Name="delBtn" Click="delBtn_Click"/>
+        <Border Height="50" Width="50"
+         Grid.Row="1" Grid.Column="7"
+                Background="#F5F5F5"
+                CornerRadius="30"/>
         <Button Height="50" Width="50"
          Grid.Row="1" Grid.Column="7"
-         Content="✕"
-         Background="#F5F5F5"
+         Content="↺"
+         Background="Transparent"
          BorderBrush="#8b4513"
          BorderThickness="0"
          HorizontalAlignment="Center"
-         FontSize="15" FontWeight="Bold"
+         FontSize="25" FontWeight="Bold"
          Foreground="PaleVioletRed"
          x:Name="updateBtn" Click="updateBtn_Click" Cursor="Hand"/>
 
