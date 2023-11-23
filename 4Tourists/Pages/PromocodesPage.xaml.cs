@@ -1,4 +1,5 @@
 ﻿using _4Tourists.DB;
+using _4Tourists.OKNO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,18 @@ namespace _4Tourists.Pages
                 DBConnection.TouristsGo.SaveChanges();
                 Promocodeslv.ItemsSource = DBConnection.TouristsGo.Promocode.ToList();
             }
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void addBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AddPromocodesWindow addPromocodesWindow = new AddPromocodesWindow();
+
+            addPromocodesWindow.Show();
         }
     }
 }

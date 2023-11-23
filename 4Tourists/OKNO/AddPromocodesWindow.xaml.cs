@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _4Tourists.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,23 @@ namespace _4Tourists.OKNO
     /// </summary>
     public partial class AddPromocodesWindow : Window
     {
+        public static List<Promocode> promocodes { get; set; }
         public AddPromocodesWindow()
         {
             InitializeComponent();
+            promocodes = new List<Promocode>(DBConnection.TouristsGo.Promocode.ToList());
+            this.DataContext = this;
+
+        }
+
+        private void addBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Promocode promocod = new Promocode();
+            promocod.Description = NamePromTB.Text.Trim();
+            promocod.Procent =  int.Parse(ProcentTB.Text.Trim());
+
+            DBConnection.TouristsGo.Promocode.Add(promocod);
+            DBConnection.TouristsGo.SaveChanges();
         }
     }
 }
