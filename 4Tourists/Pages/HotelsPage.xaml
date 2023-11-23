@@ -54,7 +54,7 @@ Margin="20 0 0 0"/>
            Grid.Row="2" Grid.RowSpan="5"
            x:Name="HotelsSlv" 
            BorderBrush="#8B4513"
-           ItemsSource="{Binding hotels}">
+           ItemsSource="{Binding hotels}" SelectionChanged="HotelsSlv_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Название"
@@ -110,12 +110,6 @@ Margin="20 0 0 0"/>
          FontSize="15" FontWeight="Bold"
          Foreground="PaleVioletRed"
          x:Name="delBtn" Click="delBtn_Click"/>
-        <Button Height="50" Width="50"
-Content="..."
-        Grid.Row="7" Grid.Column="3"
-        Grid.RowSpan="2"
-FontSize="25" FontWeight="Bold"
-Foreground="#788E78" Background="#F5F5F5"
-x:Name="EditBtn" BorderThickness="0" Click="EditBtn_Click"/>
+        
     </Grid>
 </Page>

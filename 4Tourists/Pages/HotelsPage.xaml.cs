@@ -1,4 +1,5 @@
 ﻿using _4Tourists.DB;
+using _4Tourists.OKNO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +39,9 @@ namespace _4Tourists.Pages
 
         private void addBtn_Click(object sender, RoutedEventArgs e)
         {
+            AddHotelWindow addHotelWindow = new AddHotelWindow();
 
+            addHotelWindow.Show();
         }
 
         private void delBtn_Click(object sender, RoutedEventArgs e)
@@ -51,9 +54,15 @@ namespace _4Tourists.Pages
             }
         }
 
-        private void EditBtn_Click(object sender, RoutedEventArgs e)
-        {
 
+        private void HotelsSlv_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //if (HotelsSlv.SelectedItem is Hotel hotel)
+            //{
+            //    InfoClientsWindow infoClientsWindow = new InfoClientsWindow(hotel);
+
+            //    infoClientsWindow.Show();
+            //}
         }
     }
 }

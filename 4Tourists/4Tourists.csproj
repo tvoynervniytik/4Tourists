@@ -98,23 +98,23 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DB\Booking.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\City.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Clients.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Country.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="DB\Employee.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Hotel.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -146,34 +146,53 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model3.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DB\Model5.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model5.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model5.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model5.edmx</DependentUpon>
+    </Compile>
     <Compile Include="DB\Nutrition.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Payment.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Post.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Promocode.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Registration.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Tours.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\TypeTour.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="OKNO\AddHotelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OKNO\AddPromocodesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -220,6 +239,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OKNO\AddHotelWindow.xaml.cs">
+      <DependentUpon>AddHotelWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OKNO\AddPromocodesWindow.xaml.cs">
       <DependentUpon>AddPromocodesWindow.xaml</DependentUpon>
     </Compile>
@@ -284,6 +306,13 @@
     <None Include="DB\Model3.edmx.diagram">
       <DependentUpon>Model3.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="DB\Model5.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model5.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\Model5.edmx.diagram">
+      <DependentUpon>Model5.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -321,6 +350,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model3.edmx</DependentUpon>
       <LastGenOutput>Model3.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model5.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model5.edmx</DependentUpon>
+      <LastGenOutput>Model5.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model5.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model5.edmx</DependentUpon>
+      <LastGenOutput>Model5.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
