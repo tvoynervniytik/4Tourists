@@ -63,7 +63,7 @@ namespace _4Tourists.Pages
 
         private void updateBtn_Click(object sender, RoutedEventArgs e)
         {
-            ClientsSlv.ItemsSource = DBConnection.TouristsGo.Promocode.ToList();
+            ClientsSlv.ItemsSource = DBConnection.TouristsGo.Clients.ToList();
         }
     }
 }
