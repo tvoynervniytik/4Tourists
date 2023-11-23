@@ -8,6 +8,7 @@ namespace _4Tourists.DB
 {
     internal class DBConnection
     {
-        public static TouristsGoEntities TouristsGo = new TouristsGoEntities();
+        public static ToristsGoEntities TouristsGo = new ToristsGoEntities();
+        public static Employee loginedUser;
     }
 }

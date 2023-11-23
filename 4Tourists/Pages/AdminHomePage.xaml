@@ -124,7 +124,7 @@
                FontStyle="Italic" Background="Transparent"
                VerticalAlignment="Bottom"/>
         <TextBlock Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2"
-               Margin="75 0 0 0" Text="Familiya I. O."
+               Margin="75 0 0 0" x:Name="UserNameTB"
                FontWeight="DemiBold" Background="Transparent"
                FontSize="19" Foreground="#F5F5F5"
                VerticalAlignment="Top"/>

@@ -1,6 +1,7 @@
 ﻿using _4Tourists.DB;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,7 @@ namespace _4Tourists.Pages
                 posts = new List<Post>(DBConnection.TouristsGo.Post.ToList());
                 Post curpost = posts.FirstOrDefault(i => i.Id == currentUser.IdPost);
                 string post = curpost.Name;
+                DBConnection.loginedUser = currentUser;
                 if (currentUser != null)
                 {
                     MessageBox.Show(post);

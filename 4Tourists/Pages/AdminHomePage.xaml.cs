@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _4Tourists.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace _4Tourists.Pages
     /// </summary>
     public partial class AdminHomePage : Page
     {
+
+        public static Employee loggedUser;
         public AdminHomePage()
         {
             InitializeComponent();
+            loggedUser = DBConnection.loginedUser;
+            UserNameTB.Text = DBConnection.loginedUser.Surname;
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
