@@ -52,18 +52,28 @@ namespace _4Tourists.Pages
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(ClientsSlv.SelectedItem is Clients client)
-            {
-                InfoClientsWindow infoClientsWindow = new InfoClientsWindow(client);
+            //if(ClientsSlv.SelectedItem is Clients client)
+            //{
+            //    InfoClientsWindow infoClientsWindow = new InfoClientsWindow(client);
 
-                infoClientsWindow.Show();
-            }
+            //    infoClientsWindow.Show();
+            //}
            
         }
 
         private void updateBtn_Click(object sender, RoutedEventArgs e)
         {
-            ClientsSlv.ItemsSource = DBConnection.TouristsGo.Clients.ToList();
+            //ClientsSlv.ItemsSource = DBConnection.TouristsGo.Clients.ToList();
+        }
+
+        private void ClientsSlv_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ClientsSlv.SelectedItem is Clients client)
+            {
+                InfoClientsWindow infoClientsWindow = new InfoClientsWindow(client);
+
+                infoClientsWindow.Show();
+            }
         }
     }
 }
