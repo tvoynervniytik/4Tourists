@@ -53,5 +53,10 @@ namespace _4Tourists.Pages
         {
             NavigationService.GoBack();
         }
+
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:_4Tourists.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CouintriesPage">
+      Title="CouintriesPage"
+      Loaded="Page_Loaded">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -49,7 +50,7 @@
            VerticalAlignment="Center"/>
         <ListView Grid.Column="1" Grid.ColumnSpan="2"
           Grid.Row="2" Grid.RowSpan="5"
-          x:Name="EmployeesSlv" 
+          x:Name="CountriesSlv" 
           BorderBrush="#8B4513"
           ItemsSource="{Binding countries}">
             <ListView.View>
@@ -91,5 +92,12 @@ x:Name="addBtn" BorderThickness="0" Click="addBtn_Click"/>
         FontSize="15" FontWeight="Bold"
         Foreground="PaleVioletRed"
         x:Name="delBtn" Click="delBtn_Click"/>
+        <Button Height="50" Width="50"
+Content="..."
+        Grid.Row="7" Grid.Column="3"
+        Grid.RowSpan="2"
+FontSize="25" FontWeight="Bold"
+Foreground="#788E78" Background="#F5F5F5"
+x:Name="EditBtn" BorderThickness="0" Click="EditBtn_Click"/>
     </Grid>
 </Page>

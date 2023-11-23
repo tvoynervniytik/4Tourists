@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:_4Tourists.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ClientsPage">
+      Title="ClientsPage"
+      Loaded="Page_Loaded">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -54,7 +55,7 @@ Margin="20 0 0 0"/>
             VerticalAlignment="Center"/>
         <ListView Grid.Column="1" Grid.ColumnSpan="7"
            Grid.Row="2" Grid.RowSpan="5"
-           x:Name="EmployeesSlv" 
+           x:Name="ClientsSlv" 
            BorderBrush="#8B4513"
            ItemsSource="{Binding clients}">
             <ListView.View>
@@ -119,5 +120,12 @@ Margin="20 0 0 0"/>
          FontSize="15" FontWeight="Bold"
          Foreground="PaleVioletRed"
          x:Name="delBtn" Click="delBtn_Click"/>
+        <Button Height="50" Width="50"
+Content="..."
+        Grid.Row="7" Grid.Column="3"
+        Grid.RowSpan="2"
+FontSize="25" FontWeight="Bold"
+Foreground="#788E78" Background="#F5F5F5"
+x:Name="EditBtn" BorderThickness="0" Click="EditBtn_Click"/>
     </Grid>
 </Page>

@@ -45,5 +45,10 @@ namespace _4Tourists.Pages
         {
 
         }
+
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
