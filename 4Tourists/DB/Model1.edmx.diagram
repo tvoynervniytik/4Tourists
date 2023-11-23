@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="757f7fe5452a4196859f4e9e86290cfa" Name="Diagram1">
+        <EntityTypeShape EntityType="TouristsGoModel.Booking" Width="1.5" PointX="9.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.City" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.Clients" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.Country" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.Employee" Width="1.5" PointX="7.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.Hotel" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.Nutrition" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.Payment" Width="1.5" PointX="12" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.Post" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.Promocode" Width="1.5" PointX="9.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.Registration" Width="1.5" PointX="12" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.Tours" Width="1.5" PointX="7.5" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TouristsGoModel.TypeTour" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="TouristsGoModel.FK_Booking_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Booking_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Booking_Tours" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Payment_Booking" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Registration_Booking" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_City_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Hotel_City" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Tours_City" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Registration_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Tours_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Employee_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Tours_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Tours_Nutrition" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Payment_Promocode" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGoModel.FK_Tours_TypeTour" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
