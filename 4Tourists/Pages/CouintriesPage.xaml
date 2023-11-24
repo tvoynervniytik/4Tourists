@@ -52,19 +52,19 @@
           Grid.Row="2" Grid.RowSpan="5"
           x:Name="CountriesSlv" 
           BorderBrush="#8B4513"
-          ItemsSource="{Binding countries}">
+          ItemsSource="{Binding cities}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Id"
-                            Width="120">
+                    <GridViewColumn Header="Страна"
+                            Width="200">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Id}"/>
+                                <TextBlock Text="{Binding Country.Name}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Название"
-                            Width="200">
+                    <GridViewColumn Header="Город"
+                            Width="120">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Name}"/>
@@ -93,11 +93,30 @@ x:Name="addBtn" BorderThickness="0" Click="addBtn_Click"/>
         Foreground="PaleVioletRed"
         x:Name="delBtn" Click="delBtn_Click"/>
         <Button Height="50" Width="50"
-Content="..."
-        Grid.Row="7" Grid.Column="3"
-        Grid.RowSpan="2"
-FontSize="25" FontWeight="Bold"
-Foreground="#788E78" Background="#F5F5F5"
-x:Name="EditBtn" BorderThickness="0" Click="EditBtn_Click"/>
+                Content="..."
+                Grid.Row="7" 
+                Grid.Column="3"
+                Grid.RowSpan="2"
+                FontSize="25" 
+                FontWeight="Bold"
+                Foreground="#788E78" 
+                Background="#F5F5F5"
+                x:Name="EditBtn" 
+                BorderThickness="0" 
+                Click="EditBtn_Click"/>
+        <Border Height="50" Width="50"
+         Grid.Row="1" Grid.Column="7"
+                Background="#F5F5F5"
+                CornerRadius="30"/>
+        <Button Height="50" Width="50"
+         Grid.Row="1" Grid.Column="7"
+         Content="↺"
+         Background="Transparent"
+         BorderBrush="#8b4513"
+         BorderThickness="0"
+         HorizontalAlignment="Center"
+         FontSize="25" FontWeight="Bold"
+         Foreground="PaleVioletRed"
+         x:Name="updateBtn" Click="updateBtn_Click" Cursor="Hand"/>
     </Grid>
 </Page>
