@@ -54,6 +54,11 @@ namespace _4Tourists.Pages
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
+            var city = CountriesSlv.SelectedItem as City;
+            
+                InfoCountryWindow infoCountryWindow = new InfoCountryWindow(city);
+
+                infoCountryWindow.Show();
 
         }
 

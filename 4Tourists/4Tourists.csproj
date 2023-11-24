@@ -209,6 +209,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OKNO\InfoCountryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OKNO\InfoPromocodePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -265,6 +269,9 @@
     </Compile>
     <Compile Include="OKNO\InfoClientsWindow.xaml.cs">
       <DependentUpon>InfoClientsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OKNO\InfoCountryWindow.xaml.cs">
+      <DependentUpon>InfoCountryWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="OKNO\InfoPromocodePage.xaml.cs">
       <DependentUpon>InfoPromocodePage.xaml</DependentUpon>
