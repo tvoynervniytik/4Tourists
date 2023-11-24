@@ -112,5 +112,19 @@ Margin="20 0 0 0"/>
          Foreground="PaleVioletRed"
          x:Name="updateBtn" Click="updateBtn_Click" Cursor="Hand"/>
 
+
+        <Button Height="50" Width="50"
+            Content="..."
+            Grid.Row="7" 
+            Grid.Column="3"
+            Grid.RowSpan="2"
+            FontSize="25" 
+            FontWeight="Bold"
+            Foreground="#788E78" 
+            Background="#F5F5F5"
+            x:Name="EditBtn" 
+            BorderThickness="0" Click="EditBtn_Click_1" 
+            />
+
     </Grid>
 </Page>

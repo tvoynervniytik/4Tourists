@@ -58,5 +58,17 @@ namespace _4Tourists.Pages
         {
             Promocodeslv.ItemsSource = DBConnection.TouristsGo.Promocode.ToList();
         }
+
+        
+
+        private void EditBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+if(Promocodeslv.ItemsSource is Promocode promocode)
+            {
+                InfoPromocodePage infoPromocodePage = new InfoPromocodePage(promocode);
+
+                infoPromocodePage.Show();
+            }
+        }
     }
 }

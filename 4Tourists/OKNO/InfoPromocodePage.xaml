@@ -1,0 +1,97 @@
+﻿<Window x:Class="_4Tourists.OKNO.InfoPromocodePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_4Tourists.OKNO"
+        mc:Ignorable="d"
+        Title="InfoPromocodePage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/Rectangle.png"/>
+        </Grid.Background>
+        <TextBlock Text="Edit promocode"
+                FontSize="43" Foreground="#F5F5F5"
+                FontWeight="ExtraBlack"
+                Grid.Column="2" Grid.ColumnSpan="5"
+                Grid.Row="0" Grid.RowSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+
+        <Button Height="50" 
+            Width="50"
+            Content="+"
+            Grid.Row="7" 
+            Grid.Column="1"
+            Grid.RowSpan="2"
+            FontSize="25" 
+            FontWeight="Bold"
+            Foreground="#788E78" 
+            Background="#F5F5F5"
+            x:Name="addBtn" 
+            BorderThickness="0" Click="addBtn_Click"/>
+
+        <TextBlock Grid.Row="2"
+               Grid.Column="1"
+               Text="Название"
+               Grid.ColumnSpan="2"
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center"
+               FontSize="20"
+               Foreground="#FF675345"/>
+
+        <TextBox x:Name="NameTB" 
+             Grid.Column ="3" 
+             Grid.ColumnSpan ="2"
+             Grid.Row="2" 
+             HorizontalAlignment="Center" 
+             VerticalAlignment="Center"
+             FontSize="20" 
+             Foreground="#FF675345"
+             Width="200" 
+             Text="{Binding pro.Description}"/>
+
+        <TextBlock Grid.Column ="1" 
+               Grid.ColumnSpan ="2"
+               Grid.Row="3" 
+               Text="Скидка"
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center"
+               FontSize="20" 
+               Foreground="#FF675345"/>
+
+        <TextBox x:Name="ZvezdaTB" 
+             Grid.Column ="3" 
+             Grid.ColumnSpan ="2"
+             Grid.Row="3" 
+             HorizontalAlignment="Center" 
+             VerticalAlignment="Center"
+             FontSize="20" 
+             Foreground="#FF675345"
+             Width="200" 
+             Text="{Binding pro.Procent}"/>
+        
+    </Grid>
+</Window>
