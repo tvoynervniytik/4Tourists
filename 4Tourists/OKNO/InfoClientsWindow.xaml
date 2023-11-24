@@ -59,8 +59,8 @@
                    Grid.ColumnSpan="2"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
-                   FontSize="20"
-                   Foreground="#FF675345"/>
+                   FontSize="20" FontWeight="DemiBold"
+                   Foreground="#F5F5F5"/>
 
         <TextBox x:Name="SurnameTB" 
                  Grid.Column ="4" 
@@ -68,19 +68,19 @@
                  Grid.Row="2" 
                  HorizontalAlignment="Center" 
                  VerticalAlignment="Center"
-                 FontSize="20" 
-                 Foreground="#FF675345"
+                 FontSize="20"
+                 Foreground="#F5F5F5"
                  Width="200" 
                  Text="{Binding cli.Surname}"/>
         
         <TextBlock Grid.Column ="2" 
                    Grid.ColumnSpan ="2"
                    Grid.Row="3" 
-                   Text="Имя"
+                   Text="Имя" FontWeight="DemiBold"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
                    FontSize="20" 
-                   Foreground="#FF675345"/>
+                   Foreground="#F5F5F5"/>
 
         <TextBox x:Name="NameTB" 
                  Grid.Column ="4" 
@@ -89,16 +89,16 @@
                  HorizontalAlignment="Center" 
                  VerticalAlignment="Center"
                  FontSize="20" 
-                 Foreground="#FF675345"
+                 Foreground="#F5F5F5"
                  Width="200" Text="{Binding cli.Name}"/>
         <TextBlock Grid.Column ="2" 
                    Grid.ColumnSpan ="2"
-                   Grid.Row="4" 
+                   Grid.Row="4"  FontWeight="DemiBold"
                    Text="Отчество"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
                    FontSize="20" 
-                   Foreground="#FF675345"/>
+                   Foreground="#F5F5F5"/>
         <TextBox x:Name="PatronymicTB" 
                  Grid.Column ="4" 
                  Grid.ColumnSpan ="2"
@@ -106,17 +106,17 @@
                  HorizontalAlignment="Center" 
                  VerticalAlignment="Center"
                  FontSize="20" 
-                 Foreground="#FF675345"
+                 Foreground="#F5F5F5"
                  Width="200" Text="{Binding cli.Patronymic}"/>
 
         <TextBlock Grid.Column ="2" 
                    Grid.ColumnSpan ="2"
-                   Grid.Row="5" 
+                   Grid.Row="5" FontWeight="DemiBold"
                    Grid.RowSpan="2"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
                    FontSize="20" 
-                   Foreground="#FF675345"><Run 
+                   Foreground="#F5F5F5"><Run 
                    Text="Серия/Номер"/><LineBreak/>
         <Run Text="   паспорта"/></TextBlock>
 
@@ -127,7 +127,7 @@
                  HorizontalAlignment="Center" 
                  VerticalAlignment="Center"
                  FontSize="20" 
-                 Foreground="#FF675345"
+                 Foreground="#F5F5F5"
                  Width="200" Text="{Binding cli.PasportSeries}"/>
         <TextBox x:Name="PasportNumberTB" 
                  Grid.Column ="4" 
@@ -136,16 +136,16 @@
                  HorizontalAlignment="Center" 
                  VerticalAlignment="Center"
                  FontSize="20" 
-                 Foreground="#FF675345"
+                 Foreground="#F5F5F5"
                  Width="200" Text="{Binding cli.PasportNumber}"/>
         <TextBlock Grid.Column ="2" 
                    Grid.ColumnSpan ="2"
-                   Grid.Row="7" 
+                   Grid.Row="7" FontWeight="DemiBold"
                    Text="Номер телефона"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
                    FontSize="20" 
-                   Foreground="#FF675345"/>
+                   Foreground="#F5F5F5"/>
 
         <TextBox x:Name="PasswordTB" 
                  Grid.Column ="4" 
@@ -154,7 +154,7 @@
                  HorizontalAlignment="Center" 
                  VerticalAlignment="Center"
                  FontSize="20" 
-                 Foreground="#FF675345"
+                 Foreground="#F5F5F5"
                  Width="200" 
                  Text="{Binding cli.Phone}"/>
        
