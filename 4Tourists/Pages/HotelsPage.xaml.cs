@@ -57,6 +57,16 @@ namespace _4Tourists.Pages
 
         private void HotelsSlv_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //if (HotelsSlv.SelectedItem is Hotel hotel)
+            //{
+            //    EditHotelWindow editHotelWindow = new EditHotelWindow(hotel);
+
+            //    editHotelWindow.Show();
+            //}
+        }
+
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
             if (HotelsSlv.SelectedItem is Hotel hotel)
             {
                 EditHotelWindow editHotelWindow = new EditHotelWindow(hotel);

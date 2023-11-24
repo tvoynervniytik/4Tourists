@@ -41,6 +41,18 @@ Margin="20 0 0 0"/>
  HorizontalAlignment="Left"
  Margin="20 0 0 0" BorderThickness="0"
  Background="Transparent" Click="BackBtn_Click"/>
+        <Button Height="50" Width="50"
+            Content="..."
+            Grid.Row="7" 
+            Grid.Column="3"
+            Grid.RowSpan="2"
+            FontSize="25" 
+            FontWeight="Bold"
+            Foreground="#788E78" 
+            Background="#F5F5F5"
+            x:Name="EditBtn" 
+            BorderThickness="0" 
+            Click="EditBtn_Click"/>
 
 
         <TextBlock Text="Hotels"
