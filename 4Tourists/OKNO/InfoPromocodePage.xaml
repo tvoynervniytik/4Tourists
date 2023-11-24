@@ -82,7 +82,7 @@
                FontSize="20" 
                Foreground="#FF675345"/>
 
-        <TextBox x:Name="ZvezdaTB" 
+        <TextBox x:Name="SkidkaTB" 
              Grid.Column ="3" 
              Grid.ColumnSpan ="2"
              Grid.Row="3" 

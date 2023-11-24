@@ -63,12 +63,11 @@ namespace _4Tourists.Pages
 
         private void EditBtn_Click_1(object sender, RoutedEventArgs e)
         {
-if(Promocodeslv.ItemsSource is Promocode promocode)
-            {
+            var promocode = Promocodeslv.SelectedItem as Promocode;
                 InfoPromocodePage infoPromocodePage = new InfoPromocodePage(promocode);
 
                 infoPromocodePage.Show();
-            }
+            
         }
     }
 }
