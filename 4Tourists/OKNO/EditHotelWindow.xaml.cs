@@ -29,12 +29,11 @@ namespace _4Tourists.OKNO
         Hotel contexthotel;
         public static Hotel hot {  get; set; }
 
-
         private void InitializeDataInPage()
         {
             hotels = new List<Hotel>(DBConnection.TouristsGo.Hotel.ToList());
             CityCB.ItemsSource = DBConnection.TouristsGo.City.ToList();
-
+            
         }
         
         public EditHotelWindow(Hotel hotel)
@@ -42,6 +41,7 @@ namespace _4Tourists.OKNO
             InitializeComponent();
             contexthotel = hotel;
             hot = hotel;
+            
             InitializeDataInPage();
             this.DataContext = this;
         }
@@ -64,9 +64,11 @@ namespace _4Tourists.OKNO
                 return;
             }
             if (contexthotel.Id == 0)
+            {
                 DBConnection.TouristsGo.Hotel.Add(contexthotel);
-
-            DBConnection.TouristsGo.SaveChanges();
+                DBConnection.TouristsGo.SaveChanges();
+            }
+                
             this.Close();
         }
 

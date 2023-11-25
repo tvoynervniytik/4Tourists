@@ -62,7 +62,7 @@
                FontSize="20"
                Foreground="#FF675345"/>
 
-        <TextBox x:Name="CountryTB" 
+        <ComboBox x:Name="CountryCB" 
              Grid.Column ="3" 
              Grid.ColumnSpan ="2"
              Grid.Row="2" 
@@ -71,7 +71,13 @@
              FontSize="20" 
              Foreground="#FF675345"
              Width="200" 
-            />
+             ItemsSource="{Binding countries}">
+            <ComboBox.ItemTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding Name}"/>
+            </DataTemplate>
+            </ComboBox.ItemTemplate> 
+        </ComboBox>
 
         <TextBlock Grid.Column ="1" 
                Grid.ColumnSpan ="2"

@@ -32,6 +32,12 @@ namespace _4Tourists.OKNO
             contextCity = city;
             cit = city;
             
+            //City citay = new City();
+            //citay.Name = CityTB.Text.Trim();
+            //var ctid = CountryCB.SelectedItem as Country;
+            //citay.IdCountry = ctid.Id;
+
+           
             this.DataContext = this;
         }
 

@@ -59,28 +59,34 @@
                Grid.ColumnSpan="2"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
-               FontSize="20"
-               Foreground="#FF675345"/>
+               FontSize="20" FontWeight="DemiBold"
+               Foreground="#F5F5F5"/>
 
-        <TextBox x:Name="CountryTB" 
+        <TextBlock x:Name="CountryCB" 
              Grid.Column ="3" 
              Grid.ColumnSpan ="2"
              Grid.Row="2" 
              HorizontalAlignment="Center" 
              VerticalAlignment="Center"
              FontSize="20" 
-             Foreground="#FF675345"
+             Foreground="#F5F5F5"
              Width="200" 
-             Text="{Binding cit.IdCountry}"/>
+             Text ="{Binding cit.Country.Name}">
+            <!--<ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding IdCountry}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>-->
+        </TextBlock>
 
         <TextBlock Grid.Column ="1" 
                Grid.ColumnSpan ="2"
                Grid.Row="3" 
-               Text="Город"
+               Text="Город" FontWeight="DemiBold"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20" 
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
 
         <TextBox x:Name="CityTB" 
              Grid.Column ="3" 
@@ -89,7 +95,7 @@
              HorizontalAlignment="Center" 
              VerticalAlignment="Center"
              FontSize="20" 
-             Foreground="#FF675345"
+             Foreground="#F5F5F5"
              Width="200" 
              Text="{Binding cit.Name}"/>
         

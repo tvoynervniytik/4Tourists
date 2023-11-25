@@ -32,15 +32,15 @@ namespace _4Tourists.OKNO
 
         private void addBtn_Click(object sender, RoutedEventArgs e)
         {
-            Country country = new Country();
-            country.Name = CountryTB.Text.Trim();
-
-            DBConnection.TouristsGo.Country.Add(country);
-            DBConnection.TouristsGo.SaveChanges();
+            //Country country = new Country();
+            //country.Name = CountryTB.Text.Trim();
+            var ctid = CountryCB.SelectedItem as Country;
+            //DBConnection.TouristsGo.Country.Add(country);
+            //DBConnection.TouristsGo.SaveChanges();
 
             City city = new City();
             city.Name = CityTB.Text.Trim();
-            city.IdCountry = country.Id;
+            city.IdCountry = ctid.Id;
 
             DBConnection.TouristsGo.City.Add(city);
             DBConnection.TouristsGo.SaveChanges();
