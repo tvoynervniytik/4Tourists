@@ -1,4 +1,5 @@
 ﻿using _4Tourists.DB;
+using ControlzEx.Standard;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -59,15 +60,6 @@ namespace _4Tourists.OKNO
 
         }
 
-        private void PitanieCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //var selectedPitanie = PitanieCB.ItemsSource as Nutrition;
-
-            //if(selectedPitanie != null)
-            //{
-            //    CostTB.Text = PitanieCB.Text.ToString();
-            //}
-        }
 
         private void CityCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -77,10 +69,7 @@ namespace _4Tourists.OKNO
                 HotelCB.ItemsSource = DBConnection.TouristsGo.Hotel.Where(x => x.Id == selectedCity.Id).ToList();
             }
         }
-        private void addBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
 
         private void CostBT_Click(object sender, RoutedEventArgs e)
         {
@@ -88,6 +77,28 @@ namespace _4Tourists.OKNO
             var costnutriotion = PitanieCB.SelectedItem as Nutrition;
             var nutriotion = costnutriotion.Price;
             CostTourTB.Text = (costtour + nutriotion).ToString();
+        }
+        private void addBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            tour.Name = NameTB.Text.Trim();
+            var a = TypeTourCB.SelectedItem as TypeTour;
+            tour.IdTypetour = a.Id;
+            tour.Cost = decimal.Parse(CostTB.Text.Trim());
+            var b = PitanieCB.SelectedItem as Nutrition;
+            tour.IdNutrition = b.Id;
+            var c = CountryCB.SelectedItem as Country;
+            tour.IdCountry = c.Id;
+            var d = CityCB.SelectedItem as City;
+            tour.IdCity = d.Id;
+            var f = HotelCB.SelectedItem as Hotel;
+            tour.IdHotel = f.Id;
+
+            
+
+            DBConnection.TouristsGo.Tours.Add(tour);
+            DBConnection.TouristsGo.SaveChanges();
+            this.Close();
         }
     }
         
