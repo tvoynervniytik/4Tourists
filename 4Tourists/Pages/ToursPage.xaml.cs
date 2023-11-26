@@ -1,4 +1,5 @@
 ﻿using _4Tourists.DB;
+using _4Tourists.OKNO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -53,7 +54,8 @@ namespace _4Tourists.Pages
 
         private void addBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AddTourWindow addTourWindow = new AddTourWindow();
+            addTourWindow.Show();
         }
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)

@@ -98,23 +98,23 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DB\Booking.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\City.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Clients.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Country.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="DB\Employee.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Hotel.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -162,28 +162,28 @@
       <DependentUpon>Model5.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\Nutrition.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Payment.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Post.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Promocode.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Registration.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Tours.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\TypeTour.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -198,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OKNO\AddPromocodesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OKNO\AddTourWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -263,6 +267,9 @@
     </Compile>
     <Compile Include="OKNO\AddPromocodesWindow.xaml.cs">
       <DependentUpon>AddPromocodesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OKNO\AddTourWindow.xaml.cs">
+      <DependentUpon>AddTourWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="OKNO\EditHotelWindow.xaml.cs">
       <DependentUpon>EditHotelWindow.xaml</DependentUpon>
