@@ -61,13 +61,13 @@ namespace _4Tourists.Pages
         {
             if (EmployeesSlv.SelectedItem != null)
             {
-                DeleteEmployee(EmployeesSlv.SelectedItem as Employee);
-                EmployeesSlv.SelectedItem = null;
-                EmployeesSlv.ItemsSource = SourceStudentsList(employeeDel);
+                editEmployee = EmployeesSlv.SelectedItem as Employee;
+                EditEmployeeWindow editEmployeeWindow = new EditEmployeeWindow(editEmployee);
+                editEmployeeWindow.Show();
             }
             else
             {
-                MessageBox.Show("Выберите работника для удаления");
+                MessageBox.Show("Выберите работника для редактирования"); 
             }
         }
 
