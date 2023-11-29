@@ -62,5 +62,10 @@ namespace _4Tourists.Pages
         {
             NavigationService.Navigate(new PromocodesPage());
         }
+
+        private void bookingBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new BookingPage());
+        }
     }
 }
