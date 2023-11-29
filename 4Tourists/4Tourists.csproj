@@ -205,6 +205,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OKNO\AdditionalClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OKNO\AddPromocodesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -290,6 +294,9 @@
     </Compile>
     <Compile Include="OKNO\AddHotelWindow.xaml.cs">
       <DependentUpon>AddHotelWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OKNO\AdditionalClientWindow.xaml.cs">
+      <DependentUpon>AdditionalClientWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="OKNO\AddPromocodesWindow.xaml.cs">
       <DependentUpon>AddPromocodesWindow.xaml</DependentUpon>
