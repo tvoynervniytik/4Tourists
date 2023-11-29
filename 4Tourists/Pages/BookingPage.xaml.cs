@@ -67,7 +67,7 @@ namespace _4Tourists.Pages
         private void RefreshBtn_Click(object sender, RoutedEventArgs e)
         {
             booking = new List<Booking>(DBConnection.TouristsGo.Booking.ToList());
-            BookingSlv.ItemsSource = booking;
+            BookingSlv.ItemsSource = booking; 
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
