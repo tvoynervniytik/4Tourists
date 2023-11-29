@@ -23,13 +23,16 @@ namespace _4Tourists.Pages
     {
         public static List<Employee> employees { get; set; }
         public static List<Post> posts { get; set; }
+        public static Employee editEmployee = new Employee();
+        public static Employee employeeDel = new Employee();
+
         public EngineerHomePage()
         {
             InitializeComponent();
             employees = new List<Employee>(DBConnection.TouristsGo.Employee.ToList());
             this.DataContext = this;
-        }
 
+        }
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AuthorizationPage());
@@ -37,12 +40,55 @@ namespace _4Tourists.Pages
 
         private void addBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            editEmployee = EmployeesSlv.SelectedItem as Employee;
+            AddEmployeeWindow addEmployeeWindow = new AddEmployeeWindow(editEmployee);
+            addEmployeeWindow.Show();
         }
-
-        private void delBtn_Click(object sender, RoutedEventArgs e)
+        public static void DeleteEmployee(Employee employee)
         {
 
+            DBConnection.TouristsGo.Employee.Remove(employee);
+            DBConnection.TouristsGo.SaveChanges();
+
+
         }
-    }
+        public static List<Employee> SourceStudentsList(Employee employee)
+        {
+            return new List<Employee>(DBConnection.TouristsGo.Employee.ToList());
+        }
+        private void delBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (EmployeesSlv.SelectedItem != null)
+            {
+                DeleteEmployee(EmployeesSlv.SelectedItem as Employee);
+                EmployeesSlv.SelectedItem = null;
+                EmployeesSlv.ItemsSource = SourceStudentsList(employeeDel);
+            }
+            else
+            {
+                MessageBox.Show("Выберите работника для удаления");
+            }
+        }
+
+        private void RefreshBtn_Click(object sender, RoutedEventArgs e)
+        {
+            employees = new List<Employee>(DBConnection.TouristsGo.Employee.ToList());
+            EmployeesSlv.ItemsSource = employees;
+        }
+
+
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (EmployeesSlv.SelectedItem != null)
+            {
+                editEmployee = EmployeesSlv.SelectedItem as Employee;
+                EditEmployeeWindow editEmployeeWindow = new EditEmployeeWindow(editEmployee);
+                editEmployeeWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите работника для редактирования");
+            }
+        }
 }

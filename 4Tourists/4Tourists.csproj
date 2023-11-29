@@ -193,6 +193,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OKNO\AddEmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OKNO\AddHotelWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -261,6 +265,9 @@
   <ItemGroup>
     <Compile Include="OKNO\AddCountryWindow.xaml.cs">
       <DependentUpon>AddCountryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OKNO\AddEmployeeWindow.xaml.cs">
+      <DependentUpon>AddEmployeeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="OKNO\AddHotelWindow.xaml.cs">
       <DependentUpon>AddHotelWindow.xaml</DependentUpon>
