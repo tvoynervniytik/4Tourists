@@ -7,6 +7,47 @@
         mc:Ignorable="d"
         Title="EditEmployeeWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel Orientation="Vertical">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock FontSize="25">Окно изменения</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Имя:"/></TextBlock>
+                    <TextBox Text="{Binding employees.Name}" FontSize="15" x:Name="NameEmpTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Фамилия:"/></TextBlock>
+                    <TextBox Text="{Binding employees.Surname}" FontSize="15" x:Name="SurnameEmpTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Отчество:"/></TextBlock>
+                    <TextBox Text="{Binding employees.Patronymic}" FontSize="15" x:Name="PatronymicEmpTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Дата рождения:"/></TextBlock>
+                    <DatePicker SelectedDate="{Binding employees.Birthday}" FontSize="15" x:Name="BirthdayEmpDp" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Номер телефона:"/></TextBlock>
+                    <TextBox Text="{Binding employees.Phone}" FontSize="15" x:Name="PhoneEmpTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Должность:"/></TextBlock>
+                    <ComboBox DisplayMemberPath="Name" Text="{Binding employees.Post.Name}" FontSize="15" x:Name="PostEmpCb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Логин:"/></TextBlock>
+                    <TextBox Text="{Binding employees.Login}" FontSize="15" x:Name="LoginEmpTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Пароль:"/></TextBlock>
+                    <TextBox Text="{Binding employees.Password}"  FontSize="15" x:Name="PasswordEmpTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <Button FontSize="15" x:Name="EditEmpBtn" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1" Content="Изменить" Click="EditEmpBtn_Click" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
