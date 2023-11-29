@@ -9,6 +9,129 @@
       Title="BookingPage">
 
     <Grid>
-        
+        <StackPanel>
+            <StackPanel>
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock FontSize="25" Margin="10">Бронирование</TextBlock>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Background="#FF8B8B8B" >
+                <ListView
+                    Height="200"
+                 x:Name="BookingSlv" 
+                 BorderBrush="#8B4513"
+                 ItemsSource="{Binding Booking}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Сотрудник"
+                                   Width="140">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Employee.Name}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Туры"
+                            Width="140">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Tours.Name}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Клиент"
+                            Width="140">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Clients.Name}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Вылет"
+                            Width="95">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DateDeparture}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Прилёт"
+                            Width="117">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DateArrival}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Бронирование"
+                            Width="102">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding DateBooking}"/>
+
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Количсетво"
+                            Width="140">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Quantity}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Стоимость"
+                            Width="140">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Cost}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+            <StackPanel Margin="0 15 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button  Height="50" Width="50"  
+                        Margin="5" Content="+"   
+                FontSize="25" FontWeight="Bold"
+                Foreground="#788E78" Background="#F5F5F5"
+                x:Name="addBtn" BorderThickness="0" Click="addBtn_Click"/>
+                <Button   Height="50"  Width="50"
+                Margin="5"
+                Content="✕"
+                Background="#F5F5F5"
+                BorderBrush="#8b4513" 
+                BorderThickness="0"
+                HorizontalAlignment="Center"
+                FontSize="15" FontWeight="Bold"
+                Foreground="PaleVioletRed"
+                x:Name="delBtn" Click="delBtn_Click"/>
+                <Button  Height="50" Width="50"
+                Margin="5"
+                Content="R"
+                Background="#F5F5F5"
+                BorderBrush="#8b4513"
+                BorderThickness="0"
+                HorizontalAlignment="Center"
+                FontSize="15" FontWeight="Bold"
+                Foreground="PaleVioletRed"
+                x:Name="RefreshBtn" Click="RefreshBtn_Click"/>
+                <Button  Height="50" Width="50"
+                Margin="5"
+                Content="E"
+                Background="#F5F5F5"
+                BorderBrush="#8b4513"
+                BorderThickness="0"
+                HorizontalAlignment="Center"
+                FontSize="15" FontWeight="Bold"
+                Foreground="PaleVioletRed"
+                x:Name="EditBtn" Click="EditBtn_Click" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

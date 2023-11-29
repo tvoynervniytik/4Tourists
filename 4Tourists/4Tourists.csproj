@@ -98,23 +98,23 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DB\Booking.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\City.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Clients.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Country.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="DB\Employee.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Hotel.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -161,29 +161,44 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model5.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DB\Model6.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model6.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model6.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model6.edmx</DependentUpon>
+    </Compile>
     <Compile Include="DB\Nutrition.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Payment.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Post.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Promocode.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Registration.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
       <DependentUpon>Model5.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Tours.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\TypeTour.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model6.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -390,6 +405,13 @@
     <None Include="DB\Model5.edmx.diagram">
       <DependentUpon>Model5.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="DB\Model6.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model6.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\Model6.edmx.diagram">
+      <DependentUpon>Model6.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -437,6 +459,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model5.edmx</DependentUpon>
       <LastGenOutput>Model5.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model6.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model6.edmx</DependentUpon>
+      <LastGenOutput>Model6.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model6.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model6.edmx</DependentUpon>
+      <LastGenOutput>Model6.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

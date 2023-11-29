@@ -1,4 +1,5 @@
 ﻿using _4Tourists.DB;
+using _4Tourists.OKNO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace _4Tourists.Pages
         {
 
             DBConnection.TouristsGo.Booking.Remove(booking);
-            DBConnection.TouristsGo.SaveChanges(); 
+            DBConnection.TouristsGo.SaveChanges();
 
 
         }
@@ -67,7 +68,7 @@ namespace _4Tourists.Pages
         private void RefreshBtn_Click(object sender, RoutedEventArgs e)
         {
             booking = new List<Booking>(DBConnection.TouristsGo.Booking.ToList());
-            BookingSlv.ItemsSource = booking; 
+            BookingSlv.ItemsSource = booking;
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
@@ -77,11 +78,12 @@ namespace _4Tourists.Pages
             {
                 bookingEdit = BookingSlv.SelectedItem as Booking;
                 EditBookingWindow editBookingWindow = new EditBookingWindow(bookingEdit);
-                editBookingWindow.Show(); 
+                editBookingWindow.Show();
             }
             else
             {
                 MessageBox.Show("Выберите работника для редактирования");
             }
         }
+    }
 }

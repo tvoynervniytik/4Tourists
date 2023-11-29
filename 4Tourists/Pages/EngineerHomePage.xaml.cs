@@ -67,14 +67,14 @@ namespace _4Tourists.Pages
             }
             else
             {
-                MessageBox.Show("Выберите работника для редактирования"); 
+                MessageBox.Show("Выберите работника для редактирования");
             }
         }
 
         private void RefreshBtn_Click(object sender, RoutedEventArgs e)
         {
             employees = new List<Employee>(DBConnection.TouristsGo.Employee.ToList());
-            EmployeesSlv.ItemsSource = employees; 
+            EmployeesSlv.ItemsSource = employees;
         }
 
 
@@ -92,4 +92,5 @@ namespace _4Tourists.Pages
                 MessageBox.Show("Выберите работника для редактирования");
             }
         }
+    }
 }
