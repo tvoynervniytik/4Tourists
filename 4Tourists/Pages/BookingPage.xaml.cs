@@ -41,7 +41,7 @@ namespace _4Tourists.Pages
         {
 
             DBConnection.TouristsGo.Booking.Remove(booking);
-            DBConnection.TouristsGo.SaveChanges();
+            DBConnection.TouristsGo.SaveChanges(); 
 
 
         }
