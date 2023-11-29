@@ -74,7 +74,7 @@ namespace _4Tourists.Pages
         private void RefreshBtn_Click(object sender, RoutedEventArgs e)
         {
             employees = new List<Employee>(DBConnection.TouristsGo.Employee.ToList());
-            EmployeesSlv.ItemsSource = employees;
+            EmployeesSlv.ItemsSource = employees; 
         }
 
 
