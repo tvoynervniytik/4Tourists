@@ -56,15 +56,6 @@ namespace _4Tourists.OKNO
                 employee.Password = PasswordEmpTb.Text;
                 DBConnection.TouristsGo.Employee.Add(employee);
                 DBConnection.TouristsGo.SaveChanges();
-
-                NameEmpTb.Text = String.Empty;
-                SurnameEmpTb.Text = String.Empty;
-                PatronymicEmpTb.Text = String.Empty;
-                BirthdayEmpDp = null;
-                PhoneEmpTb.Text = String.Empty;
-                PostEmpCb.Text = String.Empty;
-                LoginEmpTb.Text = String.Empty;
-                PasswordEmpTb.Text = String.Empty;
                 Close();
 
             }
