@@ -26,6 +26,7 @@ namespace _4Tourists.OKNO
         public static Booking booking1 = new Booking();
         public static Booking bookingEdit= new Booking();
         Booking contextBooking;
+        public int countPeople;
         public static Booking bookinges { get; set; }
         private void InitializeDataInPage()
         {
@@ -78,17 +79,23 @@ namespace _4Tourists.OKNO
                 bookingEdit.Quantity = Convert.ToInt32(QuantityTb.Text);
 
                 bookingEdit.Cost = bookingEdit.Tours.Cost * bookingEdit.Quantity;
-                int count = Convert.ToInt32(QuantityTb.Text);
-                int count1 = count - 2;
-                if (count > 1 && contextBooking.Quantity != count)
+                int count = Convert.ToInt32(QuantityTb.Text); 
+                var countQuan = countPeople;
+                int count1 = count - 2; if (count > 1 && countQuan != count)
                 {
                     count -= 1;
-                    count1 += 1;
+                    count1 += 1; 
                     AdditionalClientWindow additionalClientWindow = new AdditionalClientWindow(count1, count);
-                    additionalClientWindow.Show();
+
+                    additionalClientWindow.Show(); 
+
+                    DBConnection.TouristsGo.SaveChanges();
+                    Close();
                 }
-                DBConnection.TouristsGo.SaveChanges();
-                Close();
+                else
+                {
+                    DBConnection.TouristsGo.SaveChanges(); Close();
+                }
             }
 
         }
