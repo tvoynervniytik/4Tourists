@@ -131,6 +131,16 @@
                 FontSize="15" FontWeight="Bold"
                 Foreground="PaleVioletRed"
                 x:Name="EditBtn" Click="EditBtn_Click" />
+                <Button  Height="50" Width="50"
+                Margin="5"
+                Content="Op"
+                Background="#F5F5F5"
+                BorderBrush="#8b4513"
+                BorderThickness="0"
+                HorizontalAlignment="Center"
+                FontSize="15" FontWeight="Bold"
+                Foreground="PaleVioletRed"
+                x:Name="ditBtn" Click="ditBtn_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

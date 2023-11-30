@@ -256,6 +256,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OKNO\OplataWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AdminHomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -336,6 +340,9 @@
     </Compile>
     <Compile Include="OKNO\InfoPromocodePage.xaml.cs">
       <DependentUpon>InfoPromocodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OKNO\OplataWindow.xaml.cs">
+      <DependentUpon>OplataWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AdminHomePage.xaml.cs">
       <DependentUpon>AdminHomePage.xaml</DependentUpon>
