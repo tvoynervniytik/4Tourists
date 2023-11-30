@@ -39,12 +39,17 @@ namespace _4Tourists.OKNO
 
         private void addBtn_Click(object sender, RoutedEventArgs e)
         {
+            
+            this.Close();
+        }
+
+        private void PromCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
             var COST = PromCB.SelectedItem as Promocode;
             double skidka = (double)COST.Procent;
             double costtour = (double)contextBooking.Cost;
             double rachet = (skidka / 100) * costtour;
             CostTB.Text = (costtour - rachet).ToString();
-            
         }
     }
 }

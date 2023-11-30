@@ -92,7 +92,7 @@
                   Grid.Column="4"
                   DisplayMemberPath="Description"
                   Grid.ColumnSpan="3"
-                  x:Name="PromCB" Margin="88,11,0,0" VerticalAlignment="Top" 
+                  x:Name="PromCB" Margin="88,11,0,0" VerticalAlignment="Top" SelectionChanged="PromCB_SelectionChanged" 
                   />
     </Grid>
 </Window>
