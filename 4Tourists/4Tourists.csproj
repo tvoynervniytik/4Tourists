@@ -98,23 +98,23 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DB\Booking.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\City.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Clients.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Country.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="DB\Employee.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Hotel.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -177,28 +177,28 @@
       <DependentUpon>Model6.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\Nutrition.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Payment.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Post.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Promocode.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Registration.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Tours.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\TypeTour.cs">
-      <DependentUpon>Model6.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

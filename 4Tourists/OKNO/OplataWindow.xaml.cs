@@ -22,6 +22,7 @@ namespace _4Tourists.OKNO
     {
         public static List<Promocode> promocodes { get; set; }
         public static Booking booking1 { get; set; }
+        
         Booking contextBooking;
         public OplataWindow(Booking booking)
         {
@@ -39,7 +40,15 @@ namespace _4Tourists.OKNO
 
         private void addBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            Booking booking = contextBooking;
+            Payment payment = new Payment();
+            payment.IdBooking = booking.Id;
+            payment.Cost = int.Parse(CostTB.Text);
+            payment.Promocode = PromCB.SelectedIndex;
+            payment.Requesites = RekTB.Text;
+
+            DBConnection.TouristsGo.Payment.Add(payment);
+            DBConnection.TouristsGo.SaveChanges();
             this.Close();
         }
 

@@ -54,6 +54,13 @@ namespace _4Tourists.OKNO
             DateTime dateTime1 = Convert.ToDateTime(ArrivalDp.SelectedDate);
             TimeSpan t = dateTime1 - dateTime;
             CountDayDp.Text = t.TotalDays.ToString();
+            var a = ToursCb.SelectedItem as Tours;
+            var selectedTour = DBConnection.TouristsGo.Tours.FirstOrDefault(i => i.Id == a.Id);
+            if (selectedTour != null)
+            {
+
+                CostTb.Text = (selectedTour.Cost * bookingEdit.Quantity).ToString();
+            }
 
 
 

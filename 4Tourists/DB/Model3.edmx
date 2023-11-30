@@ -83,7 +83,7 @@
           <Key>
             <PropertyRef Name="IdBooking" />
           </Key>
-          <Property Name="IdBooking" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdBooking" Type="int" Nullable="false" />
           <Property Name="Requesites" Type="nvarchar" MaxLength="50" />
           <Property Name="Promocode" Type="int" />
           <Property Name="Cost" Type="decimal" Precision="8" Scale="2" />
