@@ -50,14 +50,12 @@ namespace _4Tourists.OKNO
             InitializeDataInPage();
             this.DataContext = this;
 
-            DateTime dateTime = (DateTime)bookingEdit.DateDeparture;
-            DateTime dateTime1 = (DateTime)bookingEdit.DateArrival;
-
-            //var date = dateTime1.Date - dateTime.Date;
+            DateTime dateTime = Convert.ToDateTime(DepartureDp.SelectedDate);
+            DateTime dateTime1 = Convert.ToDateTime(ArrivalDp.SelectedDate);
             TimeSpan t = dateTime1 - dateTime;
-            //int y = Convert.ToInt32(dateTime1.Day - dateTime.Day);
-            //CountDayDp.Text = y.ToString();
             CountDayDp.Text = t.TotalDays.ToString();
+
+
 
         }
 
@@ -82,7 +80,7 @@ namespace _4Tourists.OKNO
                 bookingEdit.Cost = bookingEdit.Tours.Cost * bookingEdit.Quantity;
                 int count = Convert.ToInt32(QuantityTb.Text);
                 int count1 = count - 2;
-                if (count > 1)
+                if (count > 1 && contextBooking.Quantity != count)
                 {
                     count -= 1;
                     count1 += 1;
@@ -115,5 +113,24 @@ namespace _4Tourists.OKNO
             bookingEdit = booking1;
             CostTb.Text = (bookingEdit.Tours.Cost * bookingEdit.Quantity).ToString();
         }
+
+
+        private void DepartureDp_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DateTime dateTime = Convert.ToDateTime(DepartureDp.SelectedDate);
+            DateTime dateTime1 = Convert.ToDateTime(ArrivalDp.SelectedDate);
+            TimeSpan t = dateTime1 - dateTime;
+            CountDayDp.Text = t.TotalDays.ToString();
+            ArrivalDp.DisplayDateStart = dateTime;
+        }
+
+        private void ArrivalDp_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DateTime dateTime = Convert.ToDateTime(DepartureDp.SelectedDate);
+            DateTime dateTime1 = Convert.ToDateTime(ArrivalDp.SelectedDate);
+            TimeSpan t = dateTime1 - dateTime;
+            CountDayDp.Text = t.TotalDays.ToString();
+        }
+
     }
 }

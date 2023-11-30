@@ -76,6 +76,7 @@ namespace _4Tourists.Pages
 
             if (BookingSlv.SelectedItem != null)
             {
+                
                 bookingEdit = BookingSlv.SelectedItem as Booking;
                 EditBookingWindow editBookingWindow = new EditBookingWindow(bookingEdit);
                 editBookingWindow.Show();

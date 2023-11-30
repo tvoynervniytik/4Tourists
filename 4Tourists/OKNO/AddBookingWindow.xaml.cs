@@ -25,12 +25,14 @@ namespace _4Tourists.OKNO
         public static List<Tours> tours = new List<Tours>();
         public static DB.Tours Tours = new DB.Tours();
         public static List<Clients> clients = new List<Clients>();
+        Booking contextBooking;
 
         public AddBookingWindow()
         {
             InitializeComponent();
             employee = new List<Employee>(DBConnection.TouristsGo.Employee.ToList());
             tours = new List<Tours>(DBConnection.TouristsGo.Tours.ToList());
+            
             clients = new List<Clients>(DBConnection.TouristsGo.Clients.ToList());
             EmployeeCb.ItemsSource = employee;
             EmployeeCb.DisplayMemberPath = "Name";
@@ -38,6 +40,7 @@ namespace _4Tourists.OKNO
             ToursCb.DisplayMemberPath = "Name";
             ClientCb.ItemsSource = clients;
             ClientCb.DisplayMemberPath = "Name";
+
 
 
 
@@ -78,5 +81,56 @@ namespace _4Tourists.OKNO
 
 
         }
+
+        private void ToursCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var a = ToursCb.SelectedItem as Tours;
+            var selectedTour = DBConnection.TouristsGo.Tours.FirstOrDefault(i => i.Id == a.Id);
+            if (selectedTour != null)
+            {
+
+                CostTb.Text = (selectedTour.Cost).ToString();
+            }
+        }
+
+        private void QuantityTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var countpeople = 1;
+            var tour = ToursCb.SelectedItem as Tours;
+            var costtour = tour.Cost;
+            
+            
+            if(QuantityTb.Text == null || QuantityTb.Text == "")
+            {
+                 countpeople = 1;
+                CostTb.Text = (costtour * countpeople).ToString();
+            }
+            else
+            {
+                countpeople = int.Parse(QuantityTb.Text.Trim());
+                CostTb.Text = (costtour * countpeople).ToString();
+            }
+            
+           
+        }
+
+        private void DepartureDp_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DateTime dateTime = Convert.ToDateTime(DepartureDp.SelectedDate);
+            DateTime dateTime1 = Convert.ToDateTime(ArrivalDp.SelectedDate);
+            TimeSpan t = dateTime1 - dateTime;
+            CountDayDp.Text = t.TotalDays.ToString();
+            ArrivalDp.DisplayDateStart = dateTime;
+        }
+
+        private void ArrivalDp_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DateTime dateTime = Convert.ToDateTime(DepartureDp.SelectedDate);
+            DateTime dateTime1 = Convert.ToDateTime(ArrivalDp.SelectedDate);
+            TimeSpan t = dateTime1 - dateTime;
+            CountDayDp.Text = t.TotalDays.ToString();
+        }
+
+
     }
 }
