@@ -133,9 +133,9 @@ namespace _4Tourists.OKNO
 
         private void CountDayDp_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int CountDay = int.Parse(CountDayDp.Text.Trim());
-            int Cost = int.Parse(CostTb.Text);
-            CostTb.Text = (CountDay * Cost).ToString();
+            //int CountDay = int.Parse(CountDayDp.Text.Trim());
+            //int Cost = int.Parse(CostTb.Text);
+            //CostTb.Text = (CountDay * Cost).ToString();
             
         }
     }
