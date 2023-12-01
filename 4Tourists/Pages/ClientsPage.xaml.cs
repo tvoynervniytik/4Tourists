@@ -75,5 +75,13 @@ namespace _4Tourists.Pages
             //    infoClientsWindow.Show();
             //}
         }
+
+        private void addBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+           
+                AddClientsWindow addClientsWindow = new AddClientsWindow();
+                addClientsWindow.Show();
+            
+        }
     }
 }

@@ -96,7 +96,7 @@
              VerticalAlignment="Center"
              FontSize="20" 
              Foreground="#FF675345"
-             Width="200" 
+             Width="200"  
              />
         
     </Grid>

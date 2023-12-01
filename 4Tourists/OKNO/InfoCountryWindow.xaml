@@ -72,11 +72,6 @@
              Foreground="#F5F5F5"
              Width="200" 
              Text ="{Binding cit.Country.Name}">
-            <!--<ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding IdCountry}"/>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>-->
         </TextBlock>
 
         <TextBlock Grid.Column ="1" 

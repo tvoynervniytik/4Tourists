@@ -20,7 +20,7 @@ namespace _4Tourists.OKNO
     /// </summary>
     public partial class AddCountryWindow : Window
     {
-        public static List<City> cities {  get; set; }
+        public static List<City> cities { get; set; }
         public static List<Country> countries { get; set; }
         public AddCountryWindow()
         {
@@ -47,5 +47,7 @@ namespace _4Tourists.OKNO
 
             this.Close();
         }
+
+        
     }
 }

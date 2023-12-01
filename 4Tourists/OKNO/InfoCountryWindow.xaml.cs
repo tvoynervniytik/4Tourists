@@ -1,6 +1,7 @@
 ﻿using _4Tourists.DB;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,25 @@ namespace _4Tourists.OKNO
 
         private void addBtn_Click(object sender, RoutedEventArgs e)
         {
+            var error = string.Empty;
+            var val = new ValidationContext(contextCity);
+            var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+
+            if (Validator.TryValidateObject(contextCity, val, results, true))
+            {
+                foreach (var result in results)
+                {
+                    error += $"{result.ErrorMessage}\n";
+                }
+            }
+            if (!string.IsNullOrWhiteSpace(error))
+            {
+                MessageBox.Show(error);
+                return;
+            }
+            if (contextCity.Id == 0)
+                DBConnection.TouristsGo.City.Add(contextCity);
+            DBConnection.TouristsGo.SaveChanges();
             this.Close();
         }
     }

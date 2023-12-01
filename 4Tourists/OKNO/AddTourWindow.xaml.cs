@@ -84,7 +84,7 @@ namespace _4Tourists.OKNO
             tour.Name = NameTB.Text.Trim();
             var a = TypeTourCB.SelectedItem as TypeTour;
             tour.IdTypetour = a.Id;
-            tour.Cost = decimal.Parse(CostTB.Text.Trim());
+            tour.Cost = decimal.Parse(CostTourTB.Text.Trim());
             var b = PitanieCB.SelectedItem as Nutrition;
             tour.IdNutrition = b.Id;
             var c = CountryCB.SelectedItem as Country;
