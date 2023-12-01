@@ -84,17 +84,44 @@ namespace _4Tourists.OKNO
 
         private void ToursCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            int count;
+            var countpeople = 1;
+            if (CountDayDp.Text == "")
+            {
+                count = 1;
+            }
+            else
+            {
+                count = int.Parse(CountDayDp.Text);
+            }
             var a = ToursCb.SelectedItem as Tours;
             var selectedTour = DBConnection.TouristsGo.Tours.FirstOrDefault(i => i.Id == a.Id);
             if (selectedTour != null)
             {
-
-                CostTb.Text = (selectedTour.Cost).ToString();
+                if (QuantityTb.Text == null || QuantityTb.Text == "")
+                {
+                    countpeople = 1;
+                    CostTb.Text = (selectedTour.Cost * countpeople * count).ToString();
+                }
+                else
+                {
+                    countpeople = int.Parse(QuantityTb.Text.Trim());
+                    CostTb.Text = (selectedTour.Cost * countpeople * count).ToString();
+                }
             }
         }
 
         private void QuantityTb_TextChanged(object sender, TextChangedEventArgs e)
         {
+            int count;
+            if (CountDayDp.Text == "")
+            {
+                count = 1;
+            }
+            else
+            {
+                count = int.Parse(CountDayDp.Text);
+            }
             var countpeople = 1;
             var tour = ToursCb.SelectedItem as Tours;
             var costtour = tour.Cost;
@@ -103,12 +130,12 @@ namespace _4Tourists.OKNO
             if(QuantityTb.Text == null || QuantityTb.Text == "")
             {
                  countpeople = 1;
-                CostTb.Text = (costtour * countpeople).ToString();
+                CostTb.Text = (costtour * countpeople * count).ToString();
             }
             else
             {
                 countpeople = int.Parse(QuantityTb.Text.Trim());
-                CostTb.Text = (costtour * countpeople).ToString();
+                CostTb.Text = (costtour * countpeople * count).ToString();
             }
             
            
@@ -133,10 +160,31 @@ namespace _4Tourists.OKNO
 
         private void CountDayDp_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //int CountDay = int.Parse(CountDayDp.Text.Trim());
-            //int Cost = int.Parse(CostTb.Text);
-            //CostTb.Text = (CountDay * Cost).ToString();
-            
+            int count;
+            if (CountDayDp.Text == "")
+            {
+                count = 1;
+            }
+            else
+            {
+                count = int.Parse(CountDayDp.Text);
+            }
+            var countpeople = 1;
+            var tour = ToursCb.SelectedItem as Tours;
+            var costtour = tour.Cost;
+
+
+            if (QuantityTb.Text == null || QuantityTb.Text == "")
+            {
+                countpeople = 1;
+                CostTb.Text = (costtour * countpeople * count).ToString();
+            }
+            else
+            {
+                countpeople = int.Parse(QuantityTb.Text.Trim());
+                CostTb.Text = (costtour * countpeople * count).ToString();
+            }
+
         }
     }
 }

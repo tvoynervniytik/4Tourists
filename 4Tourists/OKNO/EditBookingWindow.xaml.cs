@@ -1,4 +1,5 @@
 ﻿using _4Tourists.DB;
+using ControlzEx.Standard;
 using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
@@ -44,12 +45,15 @@ namespace _4Tourists.OKNO
         }
         public EditBookingWindow(Booking bookingEdit)
         {
+            
             InitializeComponent();
             booking1 = bookingEdit;
             contextBooking = bookingEdit;
             bookinges = bookingEdit;
             InitializeDataInPage();
             this.DataContext = this;
+           
+            
 
             DateTime dateTime = Convert.ToDateTime(DepartureDp.SelectedDate);
             DateTime dateTime1 = Convert.ToDateTime(ArrivalDp.SelectedDate);
@@ -105,20 +109,37 @@ namespace _4Tourists.OKNO
 
         private void ToursCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            int count;
             var a = ToursCb.SelectedItem as Tours;
             var selectedTour = DBConnection.TouristsGo.Tours.FirstOrDefault(i => i.Id == a.Id);
             if (selectedTour != null)
             {
-
-                CostTb.Text = (selectedTour.Cost * bookingEdit.Quantity).ToString();
+                if (CountDayDp.Text == "")
+                {
+                    count = 1;
+                }
+                else
+                {
+                    count = int.Parse(CountDayDp.Text);
+                }
+                CostTb.Text = (selectedTour.Cost * bookingEdit.Quantity * count).ToString();
             }
+
            
         }
         private void QuantityTb_TextChanged(object sender, TextChangedEventArgs e)
-        {    
+        {    int count;
             bookingEdit = booking1;
-            CostTb.Text = (bookingEdit.Tours.Cost * bookingEdit.Quantity).ToString();
+            if(CountDayDp.Text == "")
+            {
+                count = 1;
+            }
+            else
+            {
+                count = int.Parse(CountDayDp.Text);
+            }
+            
+            CostTb.Text = (bookingEdit.Tours.Cost * bookingEdit.Quantity * count).ToString();
         }
 
 
@@ -139,5 +160,19 @@ namespace _4Tourists.OKNO
             CountDayDp.Text = t.TotalDays.ToString();
         }
 
+        private void CountDayDp_TextChanged(object sender, TextChangedEventArgs e)
+        {   int count;
+            bookingEdit = booking1;
+            if (CountDayDp.Text == "")
+            {
+                count = 1;
+            }
+            else
+            {
+                count = int.Parse(CountDayDp.Text);
+            }
+
+            CostTb.Text = (bookingEdit.Tours.Cost * bookingEdit.Quantity * count).ToString();
+        }
     }
 }
