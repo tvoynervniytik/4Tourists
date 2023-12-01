@@ -74,5 +74,10 @@ namespace _4Tourists.Pages
                 editHotelWindow.Show();
             }
         }
+
+        private void updateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            HotelsSlv.ItemsSource = DBConnection.TouristsGo.Hotel.ToList();
+        }
     }
 }

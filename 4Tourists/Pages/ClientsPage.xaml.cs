@@ -63,7 +63,7 @@ namespace _4Tourists.Pages
 
         private void updateBtn_Click(object sender, RoutedEventArgs e)
         {
-            //ClientsSlv.ItemsSource = DBConnection.TouristsGo.Clients.ToList();
+            ClientsSlv.ItemsSource = DBConnection.TouristsGo.Clients.ToList();
         }
 
         private void ClientsSlv_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -82,6 +82,11 @@ namespace _4Tourists.Pages
                 AddClientsWindow addClientsWindow = new AddClientsWindow();
                 addClientsWindow.Show();
             
+        }
+
+        private void PoickTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ClientsSlv.ItemsSource = new List<Clients>(DBConnection.TouristsGo.Clients.Where(i => i.Surname.StartsWith(PoickTB.Text)));
         }
     }
 }

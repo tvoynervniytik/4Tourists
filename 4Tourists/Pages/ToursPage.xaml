@@ -106,14 +106,7 @@ Background="Transparent" Click="BackBtn_Click"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Актуальность"
-                            Width="147">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Actuality}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+                   
                     <GridViewColumn Header="Фото"
                             Width="140">
                         <GridViewColumn.CellTemplate>

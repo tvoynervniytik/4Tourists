@@ -92,5 +92,10 @@ namespace _4Tourists.Pages
                 MessageBox.Show("Выберите работника для редактирования");
             }
         }
+
+        private void updateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeesSlv.ItemsSource= DBConnection.TouristsGo.Employee.ToList();
+        }
     }
 }

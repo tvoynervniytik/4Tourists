@@ -32,7 +32,7 @@ namespace _4Tourists.OKNO
             InitializeComponent();
             employee = new List<Employee>(DBConnection.TouristsGo.Employee.ToList());
             tours = new List<Tours>(DBConnection.TouristsGo.Tours.ToList());
-            
+            DepartureDp.DisplayDateStart = DateTime.Now;
             clients = new List<Clients>(DBConnection.TouristsGo.Clients.ToList());
             EmployeeCb.ItemsSource = employee;
             EmployeeCb.DisplayMemberPath = "Name";
@@ -131,6 +131,12 @@ namespace _4Tourists.OKNO
             CountDayDp.Text = t.TotalDays.ToString();
         }
 
-
+        private void CountDayDp_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            int CountDay = int.Parse(CountDayDp.Text.Trim());
+            int Cost = int.Parse(CostTb.Text);
+            CostTb.Text = (CountDay * Cost).ToString();
+            
+        }
     }
 }

@@ -160,5 +160,26 @@ Margin="20 0 0 0"/>
     FontSize="25" FontWeight="Bold"
     Foreground="#788E78" Background="#F5F5F5"
     x:Name="addBtn" BorderThickness="0" Click="addBtn_Click_1" />
+        <Border Height="50" Width="50"
+         Grid.Row="1" Grid.Column="7"
+                Background="#F5F5F5"
+                CornerRadius="30"/>
+        <Button Height="50" Width="50"
+         Grid.Row="1" Grid.Column="7"
+         Content="↺"
+         Background="Transparent"
+         BorderBrush="#8b4513"
+         BorderThickness="0"
+         HorizontalAlignment="Center"
+         FontSize="25" FontWeight="Bold"
+         Foreground="PaleVioletRed"
+         x:Name="updateBtn" Click="updateBtn_Click" Cursor="Hand"/>
+        <TextBlock Grid.Row="1"
+                   Text="Поиск"/>
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 x:Name="PoickTB" TextChanged="PoickTB_TextChanged"/>
+
     </Grid>
 </Page>
