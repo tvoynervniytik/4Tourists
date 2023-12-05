@@ -34,9 +34,10 @@
         </Border>
         <!--Фон блока авторизации-->
         <TextBlock Grid.Row="1" Grid.Column="1"
-             FontSize="34" Foreground="#F5F5F5"
+             FontSize="34" Foreground="#F5F5F5" 
+                   FontWeight="Bold"
              VerticalAlignment="Center"
-             Padding="12 0 0 0" FontWeight="Bold" Margin="10 0 10 0">
+             Padding="12 0 0 0"  Margin="10 0 10 0">
         authorization
         </TextBlock>
         <!--Поле логина-->
@@ -87,8 +88,6 @@
             ToolTip="Resource name: MaterialDesignRaisedAccentButton"
             IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
             materialDesign:RippleAssist.Feedback="#C0D6C0" Click="loginBtn_Click"/>
-
-        <Button Content="TestPage" Click="Button_Click"/>
 
     </Grid>
 </Page>

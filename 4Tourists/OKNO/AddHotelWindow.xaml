@@ -60,7 +60,8 @@
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20"
-               Foreground="#FF675345"/>
+               FontWeight="DemiBold"
+               Foreground="#F5F5F5"/>
 
         <TextBox x:Name="NameTB" 
              Grid.Column ="3" 
@@ -69,7 +70,8 @@
              HorizontalAlignment="Center" 
              VerticalAlignment="Center"
              FontSize="20" 
-             Foreground="#FF675345"
+             FontWeight="DemiBold"
+               Foreground="#F5F5F5"
              Width="200" 
              />
 
@@ -80,7 +82,8 @@
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20" 
-               Foreground="#FF675345"/>
+               FontWeight="DemiBold"
+               Foreground="#F5F5F5"/>
 
         <TextBox x:Name="ZvezdaTB" 
              Grid.Column ="3" 
@@ -88,8 +91,8 @@ Grid.ColumnSpan ="2"
 Grid.Row="3" 
 HorizontalAlignment="Center" 
 VerticalAlignment="Center"
-FontSize="20" 
-Foreground="#FF675345"
+FontSize="20" FontWeight="DemiBold"
+               Foreground="#F5F5F5"
 Width="200" 
              />
         <TextBlock Grid.Column ="1" 
@@ -98,8 +101,8 @@ Width="200"
                Text="Расположение"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
-               FontSize="20" 
-               Foreground="#FF675345"/>
+               FontSize="20" FontWeight="DemiBold"
+               Foreground="#F5F5F5"/>
         <ComboBox x:Name="CityCB" DisplayMemberPath="Name"
                   Grid.Column="3" Grid.ColumnSpan="2"
                   Grid.Row="4"

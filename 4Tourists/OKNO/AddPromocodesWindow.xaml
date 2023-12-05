@@ -32,30 +32,28 @@
         <Grid.Background>
                 <ImageBrush ImageSource="/img/Rectangle.png"/>
         </Grid.Background>
-        <TextBlock Text="ADDPromocodes"
+        <TextBlock Text="add promocodes"
             FontSize="43" Foreground="#F5F5F5"
             FontWeight="ExtraBlack"
             Grid.Column="2" Grid.ColumnSpan="5"
             Grid.Row="0" Grid.RowSpan="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="3"
-                   Grid.Column="1"
+        <TextBlock FontWeight="DemiBold" Foreground="#F5F5F5" Grid.Row="3"
+                   Grid.Column="1" FontSize="25"
                    Grid.ColumnSpan="2"
                    Text="Название"/>
-        <TextBlock Grid.Row="5"
-                   Grid.Column="1"
+        <TextBlock Grid.Row="5" FontWeight="DemiBold" Foreground="#F5F5F5"
+                   Grid.Column="1" FontSize="25"
                    Grid.ColumnSpan="2"
                    Text="Скидка"/>
-        <TextBox Grid.Row="3"
+        <TextBox Grid.Row="3" Foreground="#F5F5F5"
                    Grid.Column="3"
                    Grid.ColumnSpan="2"
-                 Background="Aqua"
                  x:Name="NamePromTB"/>
-        <TextBox Grid.Row="5"
+        <TextBox Grid.Row="5" Foreground="#F5F5F5"
                    Grid.Column="3"
                    Grid.ColumnSpan="2"
-                 Background="Aqua"
                  x:Name="ProcentTB"/>
         <Button Height="50" Width="50"
  Content="+"

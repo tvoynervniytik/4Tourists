@@ -9,18 +9,31 @@
       Title="BookingPage">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/Rectangle.png"/>
+        </Grid.Background>
         <StackPanel>
+            
+            <Button x:Name="BackBtn"
+    Height="33" Width="100" Content="Back"
+    HorizontalAlignment="Left" Foreground="#F5F5F5"
+    Margin="20 20 0 0" BorderThickness="0" FontSize="21"
+    Background="Transparent" Click="BackBtn_Click"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center">
             <StackPanel>
                 <StackPanel HorizontalAlignment="Center">
-                    <TextBlock FontSize="25" Margin="10">Бронирование</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="1"
+             FontSize="34" Foreground="#F5F5F5" FontWeight="Bold"
+             VerticalAlignment="Center">Бронирование</TextBlock>
                 </StackPanel>
             </StackPanel>
 
-            <StackPanel HorizontalAlignment="Center" Background="#FF8B8B8B" >
+            <StackPanel HorizontalAlignment="Center">
                 <ListView
                     Height="200"
-                 x:Name="BookingSlv" 
-                 BorderBrush="#8B4513"
+                    Width="650"
+                 x:Name="BookingSlv"
                  ItemsSource="{Binding Booking}">
                     <ListView.View>
                         <GridView>

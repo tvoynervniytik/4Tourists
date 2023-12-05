@@ -26,7 +26,6 @@ namespace _4Tourists.DB
         public byte[] Photo { get; set; }
         public Nullable<int> IdCity { get; set; }
     
-        public virtual City City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tours> Tours { get; set; }
     }

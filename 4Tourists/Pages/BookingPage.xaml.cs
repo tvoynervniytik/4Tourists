@@ -97,5 +97,10 @@ namespace _4Tourists.Pages
             }
             
         }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

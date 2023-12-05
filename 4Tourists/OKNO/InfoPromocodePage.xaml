@@ -55,12 +55,12 @@
 
         <TextBlock Grid.Row="2"
                Grid.Column="1"
-               Text="Название"
+               Text="Название" FontWeight="DemiBold"
                Grid.ColumnSpan="2"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20"
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
 
         <TextBox x:Name="NameTB" 
              Grid.Column ="3" 
@@ -69,18 +69,18 @@
              HorizontalAlignment="Center" 
              VerticalAlignment="Center"
              FontSize="20" 
-             Foreground="#FF675345"
+             Foreground="#F5F5F5"
              Width="200" 
              Text="{Binding pro.Description}"/>
 
         <TextBlock Grid.Column ="1" 
                Grid.ColumnSpan ="2"
                Grid.Row="3" 
-               Text="Скидка"
+               Text="Скидка" FontWeight="DemiBold"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20" 
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
 
         <TextBox x:Name="SkidkaTB" 
              Grid.Column ="3" 
@@ -89,7 +89,7 @@
              HorizontalAlignment="Center" 
              VerticalAlignment="Center"
              FontSize="20" 
-             Foreground="#FF675345"
+             Foreground="#F5F5F5"
              Width="200" 
              Text="{Binding pro.Procent}"/>
         

@@ -23,7 +23,6 @@ namespace _4Tourists.DB
         public Nullable<System.DateTime> DateBooking { get; set; }
         public Nullable<int> Quantity { get; set; }
         public Nullable<decimal> Cost { get; set; }
-        public Nullable<bool> Aatuality { get; set; }
     
         public virtual Clients Clients { get; set; }
         public virtual Employee Employee { get; set; }

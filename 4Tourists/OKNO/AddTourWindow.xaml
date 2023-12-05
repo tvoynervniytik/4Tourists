@@ -54,13 +54,13 @@
             BorderThickness="0" Click="addBtn_Click"/>
 
         <TextBlock Grid.Row="1"
-               Grid.Column="1"
+               Grid.Column="1" FontWeight="DemiBold"
                Text="Название"
                Grid.ColumnSpan="2"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20"
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
         <TextBox x:Name="NameTB" 
              Grid.Column ="3" 
              Grid.ColumnSpan ="2"
@@ -68,85 +68,85 @@
              HorizontalAlignment="Center" 
              VerticalAlignment="Center"
              FontSize="20" 
-             Foreground="#FF675345"
+             Foreground="#F5F5F5"
              Width="200" 
              />
 
         <TextBlock Grid.Column ="1" 
                Grid.ColumnSpan ="2"
-               Grid.Row="2" 
+               Grid.Row="2" FontWeight="DemiBold"
                Text="Вид"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20" 
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
         <ComboBox x:Name="TypeTourCB" DisplayMemberPath="Name"
                   Grid.Column="3" Grid.ColumnSpan="2"
-                  Grid.Row="2"
-                  Width="150"
+                  Grid.Row="2" Foreground="#F5F5F5"
+                  Width="150" 
                   Height="35"></ComboBox>
 
         <TextBlock Grid.Column ="1" 
                Grid.ColumnSpan ="2"
                Grid.Row="3" 
-               Text="Страна"
+               Text="Страна" FontWeight="DemiBold"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20" 
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
         <ComboBox x:Name="CountryCB" DisplayMemberPath="Name"
                   Grid.Column="3" Grid.ColumnSpan="2"
-                  Grid.Row="3"
+                  Grid.Row="3" Foreground="#F5F5F5"
                   Width="150"
                   Height="35" SelectionChanged="CountryCB_SelectionChanged"></ComboBox>
 
         <TextBlock Grid.Column ="1" 
                Grid.ColumnSpan ="2"
                Grid.Row="4" 
-               Text="Город"
+               Text="Город" FontWeight="DemiBold"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20" 
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
         <ComboBox x:Name="CityCB" DisplayMemberPath="Name"
                   Grid.Column="3" Grid.ColumnSpan="2"
                   Grid.Row="4"
-                  Width="150"
+                  Width="150" Foreground="#F5F5F5"
                   Height="35" SelectionChanged="CityCB_SelectionChanged" ></ComboBox>
         <TextBlock Grid.Column ="1" 
                Grid.ColumnSpan ="2"
                Grid.Row="5" 
-               Text="Отель"
+               Text="Отель" FontWeight="DemiBold"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20" 
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
         <ComboBox x:Name="HotelCB" DisplayMemberPath="Name"
                   Grid.Column="3" Grid.ColumnSpan="2"
                   Grid.Row="5"
-                  Width="150"
+                  Width="150" Foreground="#F5F5F5"
                   Height="35"></ComboBox>
         <TextBlock Grid.Column ="1" 
                Grid.ColumnSpan ="2"
-               Grid.Row="6" 
+               Grid.Row="6" FontWeight="DemiBold"
                Text="Питание"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20" 
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
         <ComboBox x:Name="PitanieCB" DisplayMemberPath="Name"
                   Grid.Column="3" Grid.ColumnSpan="2"
                   Grid.Row="6"
-                  Width="150"
+                  Width="150" Foreground="#F5F5F5"
                   Height="35"></ComboBox>
         <TextBlock Grid.Column ="1" 
                Grid.ColumnSpan ="2"
                Grid.Row="7" 
-               Text="Стоимость"
+               Text="Стоимость" FontWeight="DemiBold"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20" 
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
         <TextBox x:Name="CostTB" 
              Grid.Column ="3" 
              Grid.ColumnSpan ="3"
@@ -154,16 +154,16 @@
              HorizontalAlignment="Center" 
              VerticalAlignment="Center"
              FontSize="20" 
-             Foreground="#FF675345"
+             Foreground="#F5F5F5"
              Width="200" />
         <TextBlock Grid.Column ="1" 
                Grid.ColumnSpan ="2"
-               Grid.Row="8" 
+               Grid.Row="8" FontWeight="DemiBold"
                Text="Общая стоимость"
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"
                FontSize="20" 
-               Foreground="#FF675345"/>
+               Foreground="#F5F5F5"/>
         <TextBox x:Name="CostTourTB" 
              Grid.Column ="3" 
              Grid.ColumnSpan ="3"
@@ -171,7 +171,7 @@
              HorizontalAlignment="Center" 
              VerticalAlignment="Center"
              FontSize="20" 
-             Foreground="#FF675345"
+             Foreground="#F5F5F5"
              Width="200" />
         <Image x:Name="PhotoIM"
                Grid.Column="5" Grid.ColumnSpan="3"

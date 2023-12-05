@@ -7,41 +7,45 @@
         mc:Ignorable="d"
         Title="AdditionalClientWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel Orientation="Vertical">
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/Rectangle.png"/>
+        </Grid.Background>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
             <StackPanel HorizontalAlignment="Center">
-                <TextBlock x:Name="TextTb" FontSize="25"></TextBlock>
+                <TextBlock FontSize="34" Foreground="#F5F5F5" 
+      FontWeight="Bold" x:Name="TextTb"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Имя:"/></TextBlock>
-                    <TextBox  FontSize="15" x:Name="NameTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                    <TextBlock FontWeight="DemiBold" Foreground="#F5F5F5" FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Имя:"/></TextBlock>
+                    <TextBox Foreground="#F5F5F5" FontSize="15" x:Name="NameTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Фамилия:"/></TextBlock>
-                    <TextBox  FontSize="15" x:Name="SurnameTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                    <TextBlock FontWeight="DemiBold" Foreground="#F5F5F5" FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Фамилия:"/></TextBlock>
+                    <TextBox Foreground="#F5F5F5" FontSize="15" x:Name="SurnameTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Отчество:"/></TextBlock>
-                    <TextBox  FontSize="15" x:Name="PatronymicTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                    <TextBlock FontWeight="DemiBold" Foreground="#F5F5F5" FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Отчество:"/></TextBlock>
+                    <TextBox Foreground="#F5F5F5" FontSize="15" x:Name="PatronymicTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Дата рождения:"/></TextBlock>
-                    <DatePicker FontSize="15" x:Name="BirthdayDp" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                    <TextBlock FontWeight="DemiBold" Foreground="#F5F5F5" FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Дата рождения:"/></TextBlock>
+                    <DatePicker Foreground="#F5F5F5" FontSize="15" x:Name="BirthdayDp" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Номер телефона:"/></TextBlock>
-                    <TextBox  FontSize="15" x:Name="PhoneTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                    <TextBlock FontWeight="DemiBold" Foreground="#F5F5F5" FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Номер телефона:"/></TextBlock>
+                    <TextBox Foreground="#F5F5F5" FontSize="15" x:Name="PhoneTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Серия паспорта:"/></TextBlock>
-                    <TextBox  FontSize="15" x:Name="SeriesTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                    <TextBlock FontWeight="DemiBold" Foreground="#F5F5F5" FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Серия паспорта:"/></TextBlock>
+                    <TextBox Foreground="#F5F5F5" FontSize="15" x:Name="SeriesTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                    <TextBlock FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Номер паспорта:"/></TextBlock>
-                    <TextBox  FontSize="15" x:Name="NumbersTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
+                    <TextBlock FontWeight="DemiBold" Foreground="#F5F5F5" FontSize="15" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Номер паспорта:"/></TextBlock>
+                    <TextBox Foreground="#F5F5F5" FontSize="15" x:Name="NumbersTb" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                    <Button FontSize="15" x:Name="AddClientBtn" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1" Content="Добавить" Click="AddClientBtn_Click" />
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 10 0 0">
+                    <Button Foreground="#F5F5F5" Background="#788E78" FontSize="15" x:Name="AddClientBtn" Width="150" Margin="10 0 0 0" BorderBrush="#89000000" BorderThickness="1,1,1,1" Content="Добавить" Click="AddClientBtn_Click" />
                 </StackPanel>
             </StackPanel>
         </StackPanel>
