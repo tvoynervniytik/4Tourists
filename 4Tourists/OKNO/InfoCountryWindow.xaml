@@ -70,7 +70,7 @@
              VerticalAlignment="Center"
              FontSize="20" 
              Foreground="#F5F5F5"
-             Width="200" 
+             Width="180" 
              Text ="{Binding cit.Country.Name}">
         </TextBlock>
 
@@ -91,7 +91,7 @@
              VerticalAlignment="Center"
              FontSize="20" 
              Foreground="#F5F5F5"
-             Width="200" 
+             Width="180" 
              Text="{Binding cit.Name}"/>
         
     </Grid>
