@@ -34,7 +34,7 @@
         </Grid.Background>
         
 
-        <TextBlock Text="Oplata"
+        <TextBlock Text="Payment"
                     FontSize="43" Foreground="#F5F5F5"
                     FontWeight="ExtraBlack"
                     Grid.Column="2" Grid.ColumnSpan="5"

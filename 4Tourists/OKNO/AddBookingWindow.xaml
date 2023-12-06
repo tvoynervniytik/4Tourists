@@ -14,8 +14,8 @@
         <StackPanel Orientation="Vertical">
             
             <StackPanel HorizontalAlignment="Center">
-                <TextBlock FontSize="34" Foreground="#F5F5F5" 
-      FontWeight="Bold">Окно добавления</TextBlock>
+                    <TextBlock FontSize="34" Foreground="#F5F5F5" 
+      FontWeight="Bold">add booking</TextBlock>
             </StackPanel>
             
                 <StackPanel HorizontalAlignment="Center" Orientation="Vertical">

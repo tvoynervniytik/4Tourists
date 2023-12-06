@@ -13,7 +13,7 @@
         <ScrollViewer><StackPanel Orientation="Vertical">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock FontSize="43"
-                           FontWeight="Bold" Foreground="#F5F5F5">Окно изменения</TextBlock>
+                           FontWeight="Bold" Foreground="#F5F5F5">edit employee</TextBlock>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
