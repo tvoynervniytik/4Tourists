@@ -70,7 +70,7 @@
              VerticalAlignment="Center"
              FontSize="20" 
              Foreground="#F5F5F5"
-             Width="200" 
+             Width="180" 
              Text="{Binding hot.Name}"/>
 
         <TextBlock Grid.Column ="1" 
@@ -90,7 +90,7 @@
              VerticalAlignment="Center"
              FontSize="20" 
              Foreground="#F5F5F5"
-             Width="200" 
+             Width="180" 
              Text="{Binding hot.Stars}"/>
         
         <TextBlock Grid.Column ="1" 
@@ -104,7 +104,7 @@
         <ComboBox x:Name="CityCB" DisplayMemberPath="Name"
                   Grid.Column="3" Grid.ColumnSpan="2"
                   Grid.Row="4"
-                  Width="150" Foreground="#F5F5F5"
+                  Width="180" Foreground="#F5F5F5"
                   Height="35"
                   Text="{Binding hot.City.Name}"></ComboBox>
         <Image x:Name="PhotoIM"

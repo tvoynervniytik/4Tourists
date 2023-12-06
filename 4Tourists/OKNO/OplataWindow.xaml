@@ -32,6 +32,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="/img/Rectangle.png"/>
         </Grid.Background>
+        
+
         <TextBlock Text="Oplata"
                     FontSize="43" Foreground="#F5F5F5"
                     FontWeight="ExtraBlack"

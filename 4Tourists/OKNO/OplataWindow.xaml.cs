@@ -11,6 +11,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace _4Tourists.OKNO
@@ -60,5 +61,6 @@ namespace _4Tourists.OKNO
             double rachet = (skidka / 100) * costtour;
             CostTB.Text = (costtour - rachet).ToString();
         }
+
     }
 }
