@@ -31,8 +31,8 @@
 
             <StackPanel HorizontalAlignment="Center">
                 <ListView
-                    Height="200"
-                    Width="650"
+                    Height="300"
+                    Width="800"
                  x:Name="BookingSlv"
                  ItemsSource="{Binding Booking}">
                     <ListView.View>

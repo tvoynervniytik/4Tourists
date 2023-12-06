@@ -175,11 +175,13 @@ Margin="20 0 0 0"/>
          Foreground="PaleVioletRed"
          x:Name="updateBtn" Click="updateBtn_Click" Cursor="Hand"/>
         <TextBlock Grid.Row="1" Foreground="#F5F5F5"
+                   FontSize="20" FontWeight="DemiBold"
                    VerticalAlignment="Center" HorizontalAlignment="Center"
                    Text="Поиск"/>
         <TextBox Grid.Row="1"
                  Grid.Column="1" Foreground="#F5F5F5"
-                 Grid.ColumnSpan="2" VerticalAlignment="Bottom"
+                 Grid.ColumnSpan="2" 
+                 VerticalAlignment="Center"
                  x:Name="PoickTB" TextChanged="PoickTB_TextChanged" Cursor=""/>
 
     </Grid>

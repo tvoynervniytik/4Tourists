@@ -67,6 +67,7 @@
                    Grid.Column="5" Foreground="#F5F5F5"
                    Text="{Binding booking1.Cost}"
                    Grid.ColumnSpan="2"
+                  VerticalAlignment="Bottom"
                    Name="CostTB" 
                     />
         <TextBlock Grid.Row="4"
@@ -79,6 +80,7 @@
                    Foreground="#F5F5F5"/>
         <TextBox Grid.Row="4"
                    Grid.Column="5"
+                 VerticalAlignment="Bottom"
                    x:Name="RekTB" Foreground="#F5F5F5"
                    Grid.ColumnSpan="2"/>
 
@@ -92,9 +94,10 @@
                    Foreground="#F5F5F5"/>
         <ComboBox Grid.Row="3"
                   Grid.Column="4"
+                  VerticalAlignment="Bottom"
                   DisplayMemberPath="Description"
                   Grid.ColumnSpan="3" Foreground="#F5F5F5"
-                  x:Name="PromCB" Margin="88,11,0,0" VerticalAlignment="Top" SelectionChanged="PromCB_SelectionChanged" 
+                  x:Name="PromCB" Margin="88,11,0,0" SelectionChanged="PromCB_SelectionChanged" 
                   />
     </Grid>
 </Window>

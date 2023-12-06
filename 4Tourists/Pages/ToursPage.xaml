@@ -47,7 +47,20 @@ Height="30" Width="100"
 HorizontalAlignment="Left"
 Margin="20 0 0 0" BorderThickness="0"
 Background="Transparent" Click="BackBtn_Click"/>
-
+        <Border Height="50" Width="50"
+ Grid.Row="1" Grid.Column="9"
+        Background="#F5F5F5"
+        CornerRadius="30"/>
+        <Button Width="50"
+ Grid.Row="1" Grid.Column="9"
+ Content="↺" Height="60"
+ Background="Transparent"
+ BorderBrush="#8b4513"
+ BorderThickness="0"
+ HorizontalAlignment="Center"
+ FontSize="25" FontWeight="Bold"
+ Foreground="PaleVioletRed"
+ x:Name="updateBtn" Click="updateBtn_Click" Cursor="Hand"/>
 
         <TextBlock Text="Tours"
            FontSize="43" Foreground="#F5F5F5"
@@ -106,12 +119,12 @@ Background="Transparent" Click="BackBtn_Click"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                   
+
                     <GridViewColumn Header="Фото"
                             Width="140">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Photo}"/>
+                                <Image Source="{Binding Foto}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -136,6 +149,6 @@ x:Name="addBtn" BorderThickness="0" Click="addBtn_Click"/>
         FontSize="15" FontWeight="Bold"
         Foreground="PaleVioletRed"
         x:Name="delBtn" Click="delBtn_Click"/>
-       
+
     </Grid>
 </Page>

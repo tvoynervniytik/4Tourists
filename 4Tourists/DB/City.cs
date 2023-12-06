@@ -18,6 +18,7 @@ namespace _4Tourists.DB
         public City()
         {
             this.Tours = new HashSet<Tours>();
+            this.Hotel = new HashSet<Hotel>();
         }
     
         public int Id { get; set; }
@@ -27,5 +28,7 @@ namespace _4Tourists.DB
         public virtual Country Country { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tours> Tours { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Hotel> Hotel { get; set; }
     }
 }

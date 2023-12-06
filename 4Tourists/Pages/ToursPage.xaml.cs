@@ -63,6 +63,9 @@ namespace _4Tourists.Pages
             NavigationService.GoBack();
         }
 
-        
+        private void updateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ToursSlv.ItemsSource = DBConnection.TouristsGo.Tours.ToList();
+        }
     }
 }

@@ -32,6 +32,7 @@
         <AssociationConnector Association="TouristsGo1Model.FK_Tours_Nutrition" ManuallyRouted="false" />
         <AssociationConnector Association="TouristsGo1Model.FK_Payment_Promocode" ManuallyRouted="false" />
         <AssociationConnector Association="TouristsGo1Model.FK_Tours_TypeTour" ManuallyRouted="false" />
+        <AssociationConnector Association="TouristsGo1Model.FK_Hotel_City" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

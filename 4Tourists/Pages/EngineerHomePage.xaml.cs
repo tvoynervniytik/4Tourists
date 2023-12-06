@@ -59,15 +59,15 @@ namespace _4Tourists.Pages
         }
         private void delBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (EmployeesSlv.SelectedItem != null)
+            if (EmployeesSlv.SelectedItem is Employee employee)
             {
-                editEmployee = EmployeesSlv.SelectedItem as Employee;
-                EditEmployeeWindow editEmployeeWindow = new EditEmployeeWindow(editEmployee);
-                editEmployeeWindow.Show();
+                
+                DBConnection.TouristsGo.Employee.Remove(employee);
+                DBConnection.TouristsGo.SaveChanges();
             }
             else
             {
-                MessageBox.Show("Выберите работника для редактирования");
+                MessageBox.Show("Выберите работника для удаления!");
             }
         }
 
