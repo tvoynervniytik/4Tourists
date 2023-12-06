@@ -70,7 +70,7 @@
              VerticalAlignment="Center"
              FontSize="20" 
              Foreground="#F5F5F5"
-             Width="200" 
+             Width="180" 
              Text="{Binding pro.Description}"/>
 
         <TextBlock Grid.Column ="1" 
@@ -90,7 +90,7 @@
              VerticalAlignment="Center"
              FontSize="20" 
              Foreground="#F5F5F5"
-             Width="200" 
+             Width="180" 
              Text="{Binding pro.Procent}"/>
         
     </Grid>
