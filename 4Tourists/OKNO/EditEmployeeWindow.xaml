@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/img/Rectangle.png"/>
         </Grid.Background>
-        <StackPanel Orientation="Vertical">
+        <ScrollViewer><StackPanel Orientation="Vertical">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock FontSize="43"
                            FontWeight="Bold" Foreground="#F5F5F5">Окно изменения</TextBlock>
@@ -52,6 +52,7 @@
                     <Button Background="#788E78" FontSize="15" x:Name="EditEmpBtn" Width="150" Foreground="#F5F5F5" Margin="10 0 0 0" BorderThickness="1,1,1,1" Content="Изменить" Click="EditEmpBtn_Click" />
                 </StackPanel>
             </StackPanel>
-        </StackPanel>
+        </StackPanel></ScrollViewer>
+        
     </Grid>
 </Window>

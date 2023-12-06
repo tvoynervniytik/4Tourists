@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/img/Rectangle.png"/>
         </Grid.Background>
-        <StackPanel Orientation="Vertical">
+        <ScrollViewer><StackPanel Orientation="Vertical">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock FontSize="43"
                            FontWeight="Bold" 
@@ -60,6 +60,7 @@
                 </StackPanel>
 
             </StackPanel>
-        </StackPanel>
+        </StackPanel></ScrollViewer>
+        
     </Grid>
 </Window>

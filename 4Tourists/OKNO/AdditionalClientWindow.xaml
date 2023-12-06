@@ -10,10 +10,11 @@
         <Grid.Background>
             <ImageBrush ImageSource="/img/Rectangle.png"/>
         </Grid.Background>
+        <ScrollViewer>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock FontSize="34" Foreground="#F5F5F5" 
-      FontWeight="Bold" x:Name="TextTb"></TextBlock>
+      FontWeight="Bold" x:Name="TextTb">add client</TextBlock>
             </StackPanel>
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
@@ -49,5 +50,6 @@
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-    </Grid>
+        </ScrollViewer>
+        </Grid>
 </Window>
