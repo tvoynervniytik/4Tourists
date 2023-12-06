@@ -179,8 +179,8 @@ Margin="20 0 0 0"/>
                    Text="Поиск"/>
         <TextBox Grid.Row="1"
                  Grid.Column="1" Foreground="#F5F5F5"
-                 Grid.ColumnSpan="2"
-                 x:Name="PoickTB" TextChanged="PoickTB_TextChanged"/>
+                 Grid.ColumnSpan="2" VerticalAlignment="Bottom"
+                 x:Name="PoickTB" TextChanged="PoickTB_TextChanged" Cursor=""/>
 
     </Grid>
 </Page>
